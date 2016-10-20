@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.authors = { 'Chris Goldsby' => 'cgoldsby@gmail.com'}
   s.version = '0.0.1'
   s.license = 'MIT'
-  s.summary = 'Description Button with \'... More\' text and fullscreen Description View for tvOS'
+  s.summary = 'Description View with \'... More\' text which presents a fullscreen Description View for tvOS'
   s.homepage = 'https://github.com/cgoldsby/ExpandingDescriptionView'
   s.source = { :git => 'https://github.com/cgoldsby/ExpandingDescriptionView.git', :tag => s.version }
   s.tvos.deployment_target = '9.0'
