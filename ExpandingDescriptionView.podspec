@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/cgoldsby/ExpandingDescriptionView'
   s.source = { :git => 'https://github.com/cgoldsby/ExpandingDescriptionView.git', :tag => s.version }
   s.tvos.deployment_target = '9.0'
-  s.source_files = 'Source/**/*.swift'
+  s.source_files = 'ExpandingDescriptionView/Source/**/*.swift'
   s.resource_bundle = { 'ExpandingDescriptionView' => 'Resources/**/*' }
 end
