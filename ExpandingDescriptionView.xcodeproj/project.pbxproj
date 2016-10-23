@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB52FF2C1DBCF6AA00F97D2B /* BundleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */; };
 		EB76C5B01DB5873B0014B8D5 /* ExpandingDescriptionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB76C5A61DB5873B0014B8D5 /* ExpandingDescriptionView.framework */; };
 		EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699141DB938C700D1818C /* LocalizedStrings.swift */; };
 		EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699151DB938C700D1818C /* String+Truncation.swift */; };
 		EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699161DB938C700D1818C /* UIView+Autolayout.swift */; };
 		EBA699211DB938C700D1818C /* FocusableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699181DB938C700D1818C /* FocusableScrollView.swift */; };
 		EBA699221DB938C700D1818C /* ExpandingDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */; };
-		EBA699261DB938D100D1818C /* ExpandingDescriptionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699241DB938D100D1818C /* ExpandingDescriptionViewTests.swift */; };
 		EBA699281DB93A5A00D1818C /* ExpandingDescriptionView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA699101DB938C700D1818C /* ExpandingDescriptionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBA6992B1DB942AF00D1818C /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699291DB93B4D00D1818C /* DescriptionViewController.swift */; };
 		EBA6992D1DB956E700D1818C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBA6992C1DB956E700D1818C /* Localizable.strings */; };
@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleLoader.swift; sourceTree = "<group>"; };
 		EB76C5A61DB5873B0014B8D5 /* ExpandingDescriptionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExpandingDescriptionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76C5AF1DB5873B0014B8D5 /* ExpandingDescriptionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandingDescriptionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA699101DB938C700D1818C /* ExpandingDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandingDescriptionView.h; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		EBA699161DB938C700D1818C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		EBA699181DB938C700D1818C /* FocusableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusableScrollView.swift; sourceTree = "<group>"; };
 		EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingDescriptionView.swift; sourceTree = "<group>"; };
-		EBA699241DB938D100D1818C /* ExpandingDescriptionViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingDescriptionViewTests.swift; sourceTree = "<group>"; };
 		EBA699251DB938D100D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA699291DB93B4D00D1818C /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		EBA6992C1DB956E700D1818C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -114,6 +114,7 @@
 		EBA699131DB938C700D1818C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */,
 				EBA699141DB938C700D1818C /* LocalizedStrings.swift */,
 				EBA699151DB938C700D1818C /* String+Truncation.swift */,
 				EBA699161DB938C700D1818C /* UIView+Autolayout.swift */,
@@ -149,7 +150,6 @@
 		EBA699231DB938D100D1818C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				EBA699241DB938D100D1818C /* ExpandingDescriptionViewTests.swift */,
 				EBA699251DB938D100D1818C /* Info.plist */,
 			);
 			path = Tests;
@@ -224,6 +224,7 @@
 					EB76C5AE1DB5873B0014B8D5 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = AKFY9VS7WN;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -269,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB52FF2C1DBCF6AA00F97D2B /* BundleLoader.swift in Sources */,
 				EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */,
 				EBA699221DB938C700D1818C /* ExpandingDescriptionView.swift in Sources */,
 				EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */,
@@ -282,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA699261DB938D100D1818C /* ExpandingDescriptionViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,11 +440,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AKFY9VS7WN;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cgoldsby.ExpandingDescriptionViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
@@ -452,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AKFY9VS7WN;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

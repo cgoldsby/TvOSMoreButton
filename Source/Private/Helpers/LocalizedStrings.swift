@@ -26,12 +26,3 @@ extension String {
         }
     }
 }
-
-private class BundleLoader {
-    
-    static var mainBundle: NSBundle {
-        let podBundle = NSBundle(forClass: BundleLoader.self)
-        let resourceUrl  = podBundle.URLForResource("ExpandingDescriptionView", withExtension: "bundle")!
-        return NSBundle(URL: resourceUrl)!
-    }
-}
