@@ -1,0 +1,16 @@
+PODS:
+  - ExpandingDescriptionView (0.0.1)
+
+DEPENDENCIES:
+  - ExpandingDescriptionView (from `..`)
+
+EXTERNAL SOURCES:
+  ExpandingDescriptionView:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  ExpandingDescriptionView: 5f5780bfa939f25a0800f275c969f9c25f33a63a
+
+PODFILE CHECKSUM: 07dc094a728e6ff73ce7af2948b05806f5723862
+
+COCOAPODS: 1.1.1
