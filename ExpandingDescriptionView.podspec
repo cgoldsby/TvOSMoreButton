@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/cgoldsby/ExpandingDescriptionView.git', :tag => s.version }
   s.tvos.deployment_target = '9.0'
   s.source_files = 'ExpandingDescriptionView/Source/**/*.swift'
-  s.resource_bundle = { 'ExpandingDescriptionView' => 'Resources/**/*' }
+  s.resource_bundle = { 'ExpandingDescriptionView' => 'ExpandingDescriptionView/Resources/**/*' }
 end

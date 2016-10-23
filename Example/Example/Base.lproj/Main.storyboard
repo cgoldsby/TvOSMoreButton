@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Presenter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="o80-jq-HRf"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-mx-Iw2">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23194028250000001" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S11-Xc-TOt">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="qMg-f0-OrD">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-Ht-dEc" customClass="ExpandingDescriptionView" customModule="ExpandingDescriptionView">
+                                                <connections>
+                                                    <outlet property="presenterViewController" destination="BYZ-38-t0r" id="6XV-7T-Oq9"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygq-Jx-01b" customClass="ExpandingDescriptionView" customModule="ExpandingDescriptionView">
+                                                <connections>
+                                                    <outlet property="presenterViewController" destination="BYZ-38-t0r" id="kVT-Rn-NyE"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cF1-By-38t" customClass="ExpandingDescriptionView" customModule="ExpandingDescriptionView">
+                                                <connections>
+                                                    <outlet property="presenterViewController" destination="BYZ-38-t0r" id="lvJ-Mw-Ued"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ygq-Jx-01b" firstAttribute="top" secondItem="qMg-f0-OrD" secondAttribute="top" id="HBD-vI-085"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="g4d-Ht-dEc" secondAttribute="bottom" id="HoW-la-72s"/>
+                                            <constraint firstItem="cF1-By-38t" firstAttribute="top" secondItem="qMg-f0-OrD" secondAttribute="top" id="Qk5-gi-vYL"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cF1-By-38t" secondAttribute="bottom" id="o9X-VI-9Nc"/>
+                                            <constraint firstAttribute="height" constant="460" id="ocf-d3-NXr"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ygq-Jx-01b" secondAttribute="bottom" id="p4r-jL-m2h"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Amr-wh-jdK">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Description Centered Text in Fullscreen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOF-Xg-66p">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Description Scrollable Text in Fullscreen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKV-1b-zXf">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Description Text is not focusable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17r-sS-XXm">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="580" id="0jw-8e-zwP"/>
+                                    <constraint firstItem="qMg-f0-OrD" firstAttribute="top" secondItem="S11-Xc-TOt" secondAttribute="top" id="6d5-yx-Dwk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Amr-wh-jdK" secondAttribute="bottom" id="9xr-7a-Rvb"/>
+                                    <constraint firstItem="Amr-wh-jdK" firstAttribute="top" secondItem="qMg-f0-OrD" secondAttribute="bottom" constant="32" id="If6-I2-LUW"/>
+                                    <constraint firstAttribute="trailing" secondItem="qMg-f0-OrD" secondAttribute="trailing" id="gAq-kS-gaU"/>
+                                    <constraint firstItem="Amr-wh-jdK" firstAttribute="leading" secondItem="S11-Xc-TOt" secondAttribute="leading" id="nUU-Wp-Y3B"/>
+                                    <constraint firstItem="qMg-f0-OrD" firstAttribute="leading" secondItem="S11-Xc-TOt" secondAttribute="leading" id="uk9-Ka-4Kl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Amr-wh-jdK" secondAttribute="trailing" id="xuY-mW-nl8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="o80-jq-HRf" secondAttribute="trailing" id="1iK-l1-RYb"/>
+                            <constraint firstItem="o80-jq-HRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EZP-oq-Txa"/>
+                            <constraint firstItem="o80-jq-HRf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Eet-YF-7NW"/>
+                            <constraint firstItem="S11-Xc-TOt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F92-ZV-sFw"/>
+                            <constraint firstItem="XHs-mx-Iw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f9l-Sk-sn7"/>
+                            <constraint firstItem="XHs-mx-Iw2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jDc-Fm-5rk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o80-jq-HRf" secondAttribute="bottom" id="jFj-3y-qfU"/>
+                            <constraint firstAttribute="trailing" secondItem="S11-Xc-TOt" secondAttribute="trailing" constant="80" id="ngX-nb-656"/>
+                            <constraint firstItem="S11-Xc-TOt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="ow8-nR-n2s"/>
+                            <constraint firstAttribute="trailing" secondItem="XHs-mx-Iw2" secondAttribute="trailing" id="qAy-jA-QM7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XHs-mx-Iw2" secondAttribute="bottom" id="qZt-eW-7se"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftExpandingDescriptionView" destination="g4d-Ht-dEc" id="sDt-dF-Ayr"/>
+                        <outlet property="middleExpandingDescriptionView" destination="ygq-Jx-01b" id="Ky6-Uo-ViT"/>
+                        <outlet property="rightExpandingDescriptionView" destination="cF1-By-38t" id="XYH-aj-Dzy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1948" height="1080"/>
+    </resources>
 </document>

@@ -39,19 +39,19 @@ public class ExpandingDescriptionView: UIView {
     
     public var ellipsesString = String.ExpandingDescription.ellipses.🌍
     public var trailingText = String.ExpandingDescription.more.🌍
-    public var trailingTextColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
-    public var trailingTextFont = UIFont.boldSystemFontOfSize(20)
+    public var trailingTextColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+    public var trailingTextFont = UIFont.boldSystemFontOfSize(18)
     public var pressAnimationDuration = 0.1
     public var labelMargin = CGFloat(12.0)
-    public var cornerRadius = CGFloat(5.0)
+    public var cornerRadius = CGFloat(10.0)
     public var focusedScaleFactor = CGFloat(1.05)
     public var shadowRadius = CGFloat(10)
     public var shadowColor = UIColor.blackColor().CGColor
     public var focusedShadowOffset = CGSize(width: 0, height: 27)
     public var focusedShadowOpacity = Float(0.75)
-    public var focusedViewAlpha = CGFloat(0.25)
+    public var focusedViewAlpha = CGFloat(0.75)
     public var descriptionViewController = DescriptionViewController()
-    public weak var presenterViewController: UIViewController?
+    @IBOutlet public weak var presenterViewController: UIViewController?
     
     private var textAttributes: [String : AnyObject] {
         return [
