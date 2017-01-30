@@ -12,16 +12,19 @@ import Foundation
 extension String {
     
     enum ExpandingDescription {
-        
         case ellipses
         case more
         
         var 🌍: String {
             switch self {
-            case ellipses:
+            case .ellipses:
                 return "…"
-            case more:
-                return NSLocalizedString("ExpandingDescription.More.Text", bundle: BundleLoader.mainBundle, comment: "Text that appears after a long description in a label.").uppercaseString
+            case .more:
+                return NSLocalizedString(
+                    "ExpandingDescription.More.Text",
+                    bundle: BundleLoader.main,
+                    comment: "Text that appears after a long description in a label."
+                    ).uppercased()
             }
         }
     }

@@ -11,7 +11,7 @@ import Foundation
 
 final class FocusableScrollView: UIScrollView {
     
-    override func canBecomeFocused() -> Bool {
+    override var canBecomeFocused : Bool {
         return true
     }
 }

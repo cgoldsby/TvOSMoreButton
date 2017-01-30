@@ -9,7 +9,7 @@
 import UIKit
 
 
-public class DescriptionViewController: UIViewController {
+open class DescriptionViewController: UIViewController {
     
     private var descriptionLabel: UILabel!
     private var scrollView: UIScrollView!
@@ -21,23 +21,23 @@ public class DescriptionViewController: UIViewController {
         return contentViewBounds.height < scrollViewBounds.height
     }
     
-    public var text: String? {
+    open var text: String? {
         
         didSet {
-            guard isViewLoaded() else { return }
+            guard isViewLoaded else { return }
             updateDescriptionLabel()
         }
     }
     
-    public var textColor = UIColor.whiteColor()
-    public var font = UIFont.systemFontOfSize(25)
+    open var textColor = UIColor.white
+    open var font = UIFont.systemFont(ofSize: 25)
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
-    override public func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         if isContentViewHeightSmallerThanScrollViewHeight {
             positionContentViewInCenterOfScrollView()
         }
@@ -57,8 +57,8 @@ public class DescriptionViewController: UIViewController {
     }
     
     private func setUpView() {
-        view.backgroundColor = .clearColor()
-        let blurEffect = UIBlurEffect(style: .Dark)
+        view.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: .dark)
         let blurredView = UIVisualEffectView(effect: blurEffect)
         view.addSubview(blurredView)
         blurredView.pinEdgesToSuperviewEdges()
@@ -67,17 +67,17 @@ public class DescriptionViewController: UIViewController {
     private func setUpScrollView() {
         scrollView = FocusableScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .clearColor()
+        scrollView.backgroundColor = .clear
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.panGestureRecognizer.allowedTouchTypes = [UITouchType.Indirect.rawValue]
+        scrollView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouchType.indirect.rawValue)]
         scrollView.bounces = true
         
         view.addSubview(scrollView)
-        scrollView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        scrollView.widthAnchor.constraintEqualToConstant(1150).active = true
-        scrollView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 80).active = true
-        scrollView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: -80).active = true
+        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        scrollView.widthAnchor.constraint(equalToConstant: 1150).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80).isActive = true
     }
     
     private func setUpContentView() {
@@ -85,7 +85,7 @@ public class DescriptionViewController: UIViewController {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(contentView)
         contentView.pinEdgesToSuperviewEdges()
-        contentView.widthAnchor.constraintEqualToAnchor(scrollView.widthAnchor).active = true
+        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
     }
     
     private func setUpDescriptionLabel() {

@@ -9,58 +9,58 @@
 import Foundation
 
 
-public class ExpandingDescriptionView: UIView {
+open class ExpandingDescriptionView: UIView {
     
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
     private var isFocusable = false
     
-    public var text: String? {
+    open var text: String? {
         
         didSet {
             updateUI()
         }
     }
     
-    public var textColor = UIColor.whiteColor() {
+    open var textColor = UIColor.white {
         
         didSet {
             label.textColor = textColor
         }
     }
     
-    public var font = UIFont.systemFontOfSize(25) {
+    open var font = UIFont.systemFont(ofSize: 25) {
         
         didSet {
             label.font = font
         }
     }
     
-    public var ellipsesString = String.ExpandingDescription.ellipses.🌍
-    public var trailingText = String.ExpandingDescription.more.🌍
-    public var trailingTextColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
-    public var trailingTextFont = UIFont.boldSystemFontOfSize(18)
-    public var pressAnimationDuration = 0.1
-    public var labelMargin = CGFloat(12.0)
-    public var cornerRadius = CGFloat(10.0)
-    public var focusedScaleFactor = CGFloat(1.05)
-    public var shadowRadius = CGFloat(10)
-    public var shadowColor = UIColor.blackColor().CGColor
-    public var focusedShadowOffset = CGSize(width: 0, height: 27)
-    public var focusedShadowOpacity = Float(0.75)
-    public var focusedViewAlpha = CGFloat(0.75)
-    public var descriptionViewController = DescriptionViewController()
-    @IBOutlet public weak var presenterViewController: UIViewController?
+    open var ellipsesString = String.ExpandingDescription.ellipses.🌍
+    open var trailingText = String.ExpandingDescription.more.🌍
+    open var trailingTextColor = UIColor.black.withAlphaComponent(0.5)
+    open var trailingTextFont = UIFont.boldSystemFont(ofSize: 18)
+    open var pressAnimationDuration = 0.1
+    open var labelMargin = CGFloat(12.0)
+    open var cornerRadius = CGFloat(10.0)
+    open var focusedScaleFactor = CGFloat(1.05)
+    open var shadowRadius = CGFloat(10)
+    open var shadowColor = UIColor.black.cgColor
+    open var focusedShadowOffset = CGSize(width: 0, height: 27)
+    open var focusedShadowOpacity = Float(0.75)
+    open var focusedViewAlpha = CGFloat(0.75)
+    open var descriptionViewController = DescriptionViewController()
+    @IBOutlet open weak var presenterViewController: UIViewController?
     
-    private var textAttributes: [String : AnyObject] {
+    private var textAttributes: [String : Any] {
         return [
             NSForegroundColorAttributeName: textColor,
             NSFontAttributeName: font
         ]
     }
     
-    private var trailingTextAttributes: [String : AnyObject] {
+    private var trailingTextAttributes: [String : Any] {
         return [
             NSForegroundColorAttributeName: trailingTextColor,
             NSFontAttributeName: trailingTextFont
@@ -77,48 +77,48 @@ public class ExpandingDescriptionView: UIView {
         setUpUI()
     }
     
-    override public func intrinsicContentSize() -> CGSize {
-        return label.intrinsicContentSize()
+    override open var intrinsicContentSize : CGSize {
+        return label.intrinsicContentSize
     }
     
-    override public func canBecomeFocused() -> Bool {
+    override open var canBecomeFocused : Bool {
         return isFocusable
     }
     
-    override public func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+    override open func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         coordinator.addCoordinatedAnimations({
-            self.focused ? self.applyFocusedAppearance() : self.applyUnfocusedAppearance()
+            self.isFocused ? self.applyFocusedAppearance() : self.applyUnfocusedAppearance()
             }, completion: nil)
     }
     
-    public func updateUI() {
+    open func updateUI() {
         truncateAndUpdateText()
     }
     
-    public func presentDescriptionViewController() {
+    open func presentDescriptionViewController() {
         descriptionViewController.text = text
-        descriptionViewController.modalPresentationStyle = .OverCurrentContext
-        presenterViewController?.presentViewController(descriptionViewController, animated: true, completion: nil)
+        descriptionViewController.modalPresentationStyle = .overCurrentContext
+        presenterViewController?.present(descriptionViewController, animated: true, completion: nil)
     }
     
     // MARK: - Presses
     
-    override public func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        super.pressesBegan(presses, withEvent: event)
-        for item in presses where item.type == .Select {
+    override open func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        super.pressesBegan(presses, with: event)
+        for item in presses where item.type == .select {
             applyPressDownAppearance()
         }
     }
     
-    override public func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        super.pressesEnded(presses, withEvent: event)
-        for item in presses where item.type == .Select {
+    override open func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        super.pressesEnded(presses, with: event)
+        for item in presses where item.type == .select {
             applyPressUpAppearance()
         }
     }
     
-    override public func pressesCancelled(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        for item in presses where item.type == .Select {
+    override open func pressesCancelled(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        for item in presses where item.type == .select {
             applyPressUpAppearance()
         }
     }
@@ -134,8 +134,8 @@ public class ExpandingDescriptionView: UIView {
     }
     
     private func setUpView() {
-        userInteractionEnabled = true
-        backgroundColor = .clearColor()
+        isUserInteractionEnabled = true
+        backgroundColor = .clear
         clipsToBounds = false
     }
     
@@ -157,7 +157,7 @@ public class ExpandingDescriptionView: UIView {
         addSubview(focusedView)
         focusedView.pinEdgesToSuperviewEdges()
         
-        let blurEffect = UIBlurEffect(style: .Light)
+        let blurEffect = UIBlurEffect(style: .light)
         let blurredView = UIVisualEffectView(effect: blurEffect)
         blurredView.alpha = focusedViewAlpha
         blurredView.layer.cornerRadius = cornerRadius
@@ -169,38 +169,38 @@ public class ExpandingDescriptionView: UIView {
     
     private func setUpSelectGestureRecognizer() {
         selectGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(presentDescriptionViewController))
-        selectGestureRecognizer.allowedPressTypes = [UIPressType.Select.rawValue]
+        selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.select.rawValue)]
         addGestureRecognizer(selectGestureRecognizer)
     }
     
     // MARK: - Focus Appearance
     
     private func applyFocusedAppearance() {
-        transform = CGAffineTransformMakeScale(focusedScaleFactor, focusedScaleFactor)
+        transform = CGAffineTransform(scaleX: focusedScaleFactor, y: focusedScaleFactor)
         focusedView.layer.shadowOffset = focusedShadowOffset
         focusedView.layer.shadowOpacity = focusedShadowOpacity
         focusedView.alpha = 1
     }
     
     private func applyUnfocusedAppearance() {
-        transform = CGAffineTransformIdentity
+        transform = CGAffineTransform.identity
         focusedView.layer.shadowOffset = .zero
         focusedView.layer.shadowOpacity = 0
         focusedView.alpha = 0
     }
     
     private func applyPressUpAppearance() {
-        UIView.animateWithDuration(pressAnimationDuration) {
+        UIView.animate(withDuration: pressAnimationDuration, animations: {
             self.applyFocusedAppearance()
-        }
+        }) 
     }
     
     private func applyPressDownAppearance() {
-        UIView.animateWithDuration(pressAnimationDuration) {
-            self.transform = CGAffineTransformIdentity
+        UIView.animate(withDuration: pressAnimationDuration, animations: {
+            self.transform = CGAffineTransform.identity
             self.focusedView.layer.shadowOffset = .zero
             self.focusedView.layer.shadowOpacity = 0
-        }
+        }) 
     }
     
     // MARK: - Truncating Text
@@ -208,7 +208,7 @@ public class ExpandingDescriptionView: UIView {
     private func truncateAndUpdateText() {
         label.text = text
         
-        guard let text = text where !text.isEmpty else { return }
+        guard let text = text, !text.isEmpty else { return }
         
         layoutIfNeeded()
         let labelSize = label.bounds.size

@@ -11,14 +11,14 @@ import Foundation
 
 final class BundleLoader {
     
-    static var mainBundle: NSBundle {
-        let podBundle = NSBundle(forClass: BundleLoader.self)
-        if let resourceUrl  = podBundle.URLForResource("ExpandingDescriptionView", withExtension: "bundle"),
-            let bundle = NSBundle(URL: resourceUrl) {
+    static let main: Bundle = {
+        let podBundle = Bundle(for: BundleLoader.self)
+        if let url = podBundle.url(forResource: String(describing: BundleLoader.self), withExtension: "bundle"),
+            let bundle = Bundle(url: url) {
             return bundle
         }
         else {
-            return .mainBundle()
+            return .main
         }
-    }
+    }()
 }
