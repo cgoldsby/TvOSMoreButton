@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'ExpandingDescriptionView'
   s.authors = { 'Chris Goldsby' => 'cgoldsby@gmail.com'}
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.license = 'MIT'
   s.summary = 'tvOS Description View with \'... More\' text which presents a fullscreen Description View Controller'
   s.homepage = 'https://github.com/cgoldsby/ExpandingDescriptionView'
