@@ -13,7 +13,7 @@ final class BundleLoader {
     
     static let main: Bundle = {
         let podBundle = Bundle(for: BundleLoader.self)
-        if let url = podBundle.url(forResource: String(describing: BundleLoader.self), withExtension: "bundle"),
+        if let url = podBundle.url(forResource: String(describing: ExpandingDescriptionView.self), withExtension: "bundle"),
             let bundle = Bundle(url: url) {
             return bundle
         }
