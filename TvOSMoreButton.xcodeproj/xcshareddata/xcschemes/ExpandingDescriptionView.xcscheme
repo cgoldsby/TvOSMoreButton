@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB76C5A51DB5873B0014B8D5"
-               BuildableName = "ExpandingDescriptionView.framework"
-               BlueprintName = "ExpandingDescriptionView"
-               ReferencedContainer = "container:ExpandingDescriptionView.xcodeproj">
+               BuildableName = "TvOSMoreButton.framework"
+               BlueprintName = "TvOSMoreButton"
+               ReferencedContainer = "container:TvOSMoreButton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB76C5AE1DB5873B0014B8D5"
-               BuildableName = "ExpandingDescriptionViewTests.xctest"
-               BlueprintName = "ExpandingDescriptionViewTests"
-               ReferencedContainer = "container:ExpandingDescriptionView.xcodeproj">
+               BuildableName = "TvOSMoreButtonTests.xctest"
+               BlueprintName = "TvOSMoreButtonTests"
+               ReferencedContainer = "container:TvOSMoreButton.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB76C5A51DB5873B0014B8D5"
-            BuildableName = "ExpandingDescriptionView.framework"
-            BlueprintName = "ExpandingDescriptionView"
-            ReferencedContainer = "container:ExpandingDescriptionView.xcodeproj">
+            BuildableName = "TvOSMoreButton.framework"
+            BlueprintName = "TvOSMoreButton"
+            ReferencedContainer = "container:TvOSMoreButton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB76C5A51DB5873B0014B8D5"
-            BuildableName = "ExpandingDescriptionView.framework"
-            BlueprintName = "ExpandingDescriptionView"
-            ReferencedContainer = "container:ExpandingDescriptionView.xcodeproj">
+            BuildableName = "TvOSMoreButton.framework"
+            BlueprintName = "TvOSMoreButton"
+            ReferencedContainer = "container:TvOSMoreButton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB76C5A51DB5873B0014B8D5"
-            BuildableName = "ExpandingDescriptionView.framework"
-            BlueprintName = "ExpandingDescriptionView"
-            ReferencedContainer = "container:ExpandingDescriptionView.xcodeproj">
+            BuildableName = "TvOSMoreButton.framework"
+            BlueprintName = "TvOSMoreButton"
+            ReferencedContainer = "container:TvOSMoreButton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

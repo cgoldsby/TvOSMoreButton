@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EB52FF2C1DBCF6AA00F97D2B /* BundleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */; };
-		EB76C5B01DB5873B0014B8D5 /* ExpandingDescriptionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB76C5A61DB5873B0014B8D5 /* ExpandingDescriptionView.framework */; };
+		EB76C5B01DB5873B0014B8D5 /* TvOSMoreButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */; };
 		EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699141DB938C700D1818C /* LocalizedStrings.swift */; };
 		EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699151DB938C700D1818C /* String+Truncation.swift */; };
 		EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699161DB938C700D1818C /* UIView+Autolayout.swift */; };
-		EBA699211DB938C700D1818C /* FocusableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699181DB938C700D1818C /* FocusableScrollView.swift */; };
 		EBA699221DB938C700D1818C /* ExpandingDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */; };
-		EBA699281DB93A5A00D1818C /* ExpandingDescriptionView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA699101DB938C700D1818C /* ExpandingDescriptionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EBA6992B1DB942AF00D1818C /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699291DB93B4D00D1818C /* DescriptionViewController.swift */; };
+		EBA699281DB93A5A00D1818C /* TvOSMoreButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA699101DB938C700D1818C /* TvOSMoreButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBA6992D1DB956E700D1818C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBA6992C1DB956E700D1818C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -31,17 +29,15 @@
 
 /* Begin PBXFileReference section */
 		EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleLoader.swift; sourceTree = "<group>"; };
-		EB76C5A61DB5873B0014B8D5 /* ExpandingDescriptionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExpandingDescriptionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB76C5AF1DB5873B0014B8D5 /* ExpandingDescriptionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandingDescriptionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBA699101DB938C700D1818C /* ExpandingDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandingDescriptionView.h; sourceTree = "<group>"; };
+		EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvOSMoreButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB76C5AF1DB5873B0014B8D5 /* TvOSMoreButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvOSMoreButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA699101DB938C700D1818C /* TvOSMoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TvOSMoreButton.h; sourceTree = "<group>"; };
 		EBA699111DB938C700D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA699141DB938C700D1818C /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		EBA699151DB938C700D1818C /* String+Truncation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Truncation.swift"; sourceTree = "<group>"; };
 		EBA699161DB938C700D1818C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
-		EBA699181DB938C700D1818C /* FocusableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusableScrollView.swift; sourceTree = "<group>"; };
 		EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingDescriptionView.swift; sourceTree = "<group>"; };
 		EBA699251DB938D100D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBA699291DB93B4D00D1818C /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		EBA6992C1DB956E700D1818C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB76C5B01DB5873B0014B8D5 /* ExpandingDescriptionView.framework in Frameworks */,
+				EB76C5B01DB5873B0014B8D5 /* TvOSMoreButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +73,8 @@
 		EB76C5A71DB5873B0014B8D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB76C5A61DB5873B0014B8D5 /* ExpandingDescriptionView.framework */,
-				EB76C5AF1DB5873B0014B8D5 /* ExpandingDescriptionViewTests.xctest */,
+				EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */,
+				EB76C5AF1DB5873B0014B8D5 /* TvOSMoreButtonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +92,7 @@
 			children = (
 				EBA699191DB938C700D1818C /* Public */,
 				EBA699121DB938C700D1818C /* Private */,
-				EBA699101DB938C700D1818C /* ExpandingDescriptionView.h */,
+				EBA699101DB938C700D1818C /* TvOSMoreButton.h */,
 				EBA699111DB938C700D1818C /* Info.plist */,
 			);
 			path = Source;
@@ -106,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				EBA699131DB938C700D1818C /* Helpers */,
-				EBA699171DB938C700D1818C /* Views */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -122,14 +117,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		EBA699171DB938C700D1818C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				EBA699181DB938C700D1818C /* FocusableScrollView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		EBA699191DB938C700D1818C /* Public */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */,
-				EBA699291DB93B4D00D1818C /* DescriptionViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,16 +148,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA699281DB93A5A00D1818C /* ExpandingDescriptionView.h in Headers */,
+				EBA699281DB93A5A00D1818C /* TvOSMoreButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EB76C5A51DB5873B0014B8D5 /* ExpandingDescriptionView */ = {
+		EB76C5A51DB5873B0014B8D5 /* TvOSMoreButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB76C5BA1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "ExpandingDescriptionView" */;
+			buildConfigurationList = EB76C5BA1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "TvOSMoreButton" */;
 			buildPhases = (
 				EB76C5A11DB5873B0014B8D5 /* Sources */,
 				EB76C5A21DB5873B0014B8D5 /* Frameworks */,
@@ -182,14 +168,14 @@
 			);
 			dependencies = (
 			);
-			name = ExpandingDescriptionView;
+			name = TvOSMoreButton;
 			productName = ExpandingDescriptionView;
-			productReference = EB76C5A61DB5873B0014B8D5 /* ExpandingDescriptionView.framework */;
+			productReference = EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EB76C5AE1DB5873B0014B8D5 /* ExpandingDescriptionViewTests */ = {
+		EB76C5AE1DB5873B0014B8D5 /* TvOSMoreButtonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB76C5BD1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "ExpandingDescriptionViewTests" */;
+			buildConfigurationList = EB76C5BD1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "TvOSMoreButtonTests" */;
 			buildPhases = (
 				EB76C5AB1DB5873B0014B8D5 /* Sources */,
 				EB76C5AC1DB5873B0014B8D5 /* Frameworks */,
@@ -200,9 +186,9 @@
 			dependencies = (
 				EB76C5B21DB5873B0014B8D5 /* PBXTargetDependency */,
 			);
-			name = ExpandingDescriptionViewTests;
+			name = TvOSMoreButtonTests;
 			productName = ExpandingDescriptionViewTests;
-			productReference = EB76C5AF1DB5873B0014B8D5 /* ExpandingDescriptionViewTests.xctest */;
+			productReference = EB76C5AF1DB5873B0014B8D5 /* TvOSMoreButtonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EB76C5A01DB5873B0014B8D5 /* Build configuration list for PBXProject "ExpandingDescriptionView" */;
+			buildConfigurationList = EB76C5A01DB5873B0014B8D5 /* Build configuration list for PBXProject "TvOSMoreButton" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,8 +225,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB76C5A51DB5873B0014B8D5 /* ExpandingDescriptionView */,
-				EB76C5AE1DB5873B0014B8D5 /* ExpandingDescriptionViewTests */,
+				EB76C5A51DB5873B0014B8D5 /* TvOSMoreButton */,
+				EB76C5AE1DB5873B0014B8D5 /* TvOSMoreButtonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,8 +258,6 @@
 				EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */,
 				EBA699221DB938C700D1818C /* ExpandingDescriptionView.swift in Sources */,
 				EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */,
-				EBA6992B1DB942AF00D1818C /* DescriptionViewController.swift in Sources */,
-				EBA699211DB938C700D1818C /* FocusableScrollView.swift in Sources */,
 				EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +274,7 @@
 /* Begin PBXTargetDependency section */
 		EB76C5B21DB5873B0014B8D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EB76C5A51DB5873B0014B8D5 /* ExpandingDescriptionView */;
+			target = EB76C5A51DB5873B0014B8D5 /* TvOSMoreButton */;
 			targetProxy = EB76C5B11DB5873B0014B8D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -466,7 +450,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB76C5A01DB5873B0014B8D5 /* Build configuration list for PBXProject "ExpandingDescriptionView" */ = {
+		EB76C5A01DB5873B0014B8D5 /* Build configuration list for PBXProject "TvOSMoreButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB76C5B81DB5873B0014B8D5 /* Debug */,
@@ -475,7 +459,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB76C5BA1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "ExpandingDescriptionView" */ = {
+		EB76C5BA1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "TvOSMoreButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB76C5BB1DB5873B0014B8D5 /* Debug */,
@@ -484,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB76C5BD1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "ExpandingDescriptionViewTests" */ = {
+		EB76C5BD1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "TvOSMoreButtonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB76C5BE1DB5873B0014B8D5 /* Debug */,

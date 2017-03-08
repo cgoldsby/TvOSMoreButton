@@ -1,6 +1,6 @@
 //
 //  LocalizedStrings.swift
-//  ExpandingDescriptionView
+//  TvOSMoreButton
 //
 //  Created by Christopher Goldsby on 10/18/16.
 //  Copyright © 2016 Christopher Goldsby. All rights reserved.

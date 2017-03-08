@@ -1,6 +1,6 @@
 //
-//  ExpandingDescriptionView.swift
-//  ExpandingDescriptionView
+//  TvOSMoreButton.swift
+//  TvOSMoreButton
 //
 //  Created by Christopher Goldsby on 10/18/16.
 //  Copyright © 2016 Christopher Goldsby. All rights reserved.
@@ -9,8 +9,7 @@
 import Foundation
 
 
-open class ExpandingDescriptionView: UIView {
-    
+open class TvOSMoreButton: UIView {
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
@@ -50,8 +49,7 @@ open class ExpandingDescriptionView: UIView {
     open var focusedShadowOffset = CGSize(width: 0, height: 27)
     open var focusedShadowOpacity = Float(0.75)
     open var focusedViewAlpha = CGFloat(0.75)
-    open var descriptionViewController = DescriptionViewController()
-    @IBOutlet open weak var presenterViewController: UIViewController?
+    open var buttonWasPressed: ((String?) -> Void)?
     
     private var textAttributes: [String : Any] {
         return [
@@ -88,17 +86,11 @@ open class ExpandingDescriptionView: UIView {
     override open func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         coordinator.addCoordinatedAnimations({
             self.isFocused ? self.applyFocusedAppearance() : self.applyUnfocusedAppearance()
-            }, completion: nil)
+        })
     }
     
     open func updateUI() {
         truncateAndUpdateText()
-    }
-    
-    open func presentDescriptionViewController() {
-        descriptionViewController.text = text
-        descriptionViewController.modalPresentationStyle = .overCurrentContext
-        presenterViewController?.present(descriptionViewController, animated: true, completion: nil)
     }
     
     // MARK: - Presses
@@ -168,9 +160,13 @@ open class ExpandingDescriptionView: UIView {
     }
     
     private func setUpSelectGestureRecognizer() {
-        selectGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(presentDescriptionViewController))
+        selectGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectGestureWasPressed))
         selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.select.rawValue)]
         addGestureRecognizer(selectGestureRecognizer)
+    }
+    
+    @objc private func selectGestureWasPressed() {
+        buttonWasPressed?(text)
     }
     
     // MARK: - Focus Appearance
@@ -192,7 +188,7 @@ open class ExpandingDescriptionView: UIView {
     private func applyPressUpAppearance() {
         UIView.animate(withDuration: pressAnimationDuration, animations: {
             self.applyFocusedAppearance()
-        }) 
+        })
     }
     
     private func applyPressDownAppearance() {
@@ -200,7 +196,7 @@ open class ExpandingDescriptionView: UIView {
             self.transform = CGAffineTransform.identity
             self.focusedView.layer.shadowOffset = .zero
             self.focusedView.layer.shadowOpacity = 0
-        }) 
+        })
     }
     
     // MARK: - Truncating Text
