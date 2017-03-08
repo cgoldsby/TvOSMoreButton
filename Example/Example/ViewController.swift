@@ -23,11 +23,15 @@ final class ViewController: UIViewController {
     // MARK: - Private
     
     private func setUpUI() {
-        tvOSMoreButton.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque a libero quis auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam aliquam sem sit amet turpis gravida molestie a quis mauris. Sed metus nunc, imperdiet id vestibulum vulputate, ultricies quis erat. Quisque dictum, leo vitae pulvinar convallis, lorem lacus congue arcu, a mattis enim nisi eu diam. Phasellus vehicula iaculis maximus. Integer et ex felis. Curabitur nibh ex, commodo eget libero vitae, sodales pretium tellus. Maecenas at imperdiet lorem. Phasellus sed laoreet arcu. Mauris auctor lacus libero, vel blandit ex dapibus non. Ut at lectus nec magna tempus vehicula id at odio. Quisque cursus dui a efficitur fringilla. Ut vel lectus quis odio dignissim scelerisque. Pellentesque varius urna auctor quam faucibus commodo."
+        tvOSMoreButton.text = "It is the year 1985. Marty McFly, a mild-mannered high school student, stopped by Dr. Emmett L. Brown's laboratory to play around with an amplifier. Then he receives a message from Doc that he needs help from him for Doc's latest invention, a time machine made out of a DeLorean sports car that can travel through time instantaneously when it reaches a speed velocity of 88 MPH. Then, Doc was gunned down by Libyan Nationalists, Marty makes an effort to escape from the Lybians by using the time machine. Then Marty accidentally warps himself into 1955. Where he meets both of his parents when they were teenagers, then Marty unintentionally interrupts his parent's first meeting together, he then finds a younger version of Doc and together they try to find a way to get Marty's parents-to-be back together, and to get Marty back to 1985."
         tvOSMoreButton.buttonWasPressed = moreButtonWasPressed
     }
     
     private func moreButtonWasPressed(text: String?) -> Void {
-        
+        let viewController = TvOSTextViewerViewController()
+        viewController.text = text
+        viewController.textColor = .white
+        viewController.textEdgeInsets = UIEdgeInsets(top: 100, left: 250, bottom: 100, right: 250)
+        present(viewController, animated: true)
     }
 }
