@@ -29,7 +29,7 @@ Check out the Example workspace for a more details.
     }
     
     private func moreButtonWasPressed(text: String?) -> Void {
-        // Do something; May I suggest using TvOSTextViewerViewController 
+        // Do something. May I suggest using TvOSTextViewerViewController 
         // to display the text in a full screen view!
         let viewController = TvOSTextViewerViewController()
         viewController.text = text
