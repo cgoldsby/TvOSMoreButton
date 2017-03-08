@@ -7,7 +7,7 @@ The TvOSMoreButton is a simple view which aims to mirror the behavior of Apple's
 
 If the text is too long to fit with in the button bounds then the text will be truncated and '... More' will be appended. If the text fits with in the bounds of the button then the button is not focusable.
 
-When the button is focused, pressing the select on the Apple TV remote will trigger a callback.
+When the button is focused, pressing select on the Apple TV remote will trigger a callback.
 
 ## Customizations
 The majority of the UI properies are configurable; like
