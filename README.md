@@ -20,7 +20,7 @@ The majority of the UI properies are configurable; like
 - and More 😉
 
 ## Usage
-Check out the Example workspace for a more details.
+Check out the Example workspace for more details.
 
 ```swift
     private func setUpUI() {
