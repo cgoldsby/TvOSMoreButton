@@ -1,4 +1,4 @@
-# Expanding Description View
-#### tvOS Description View with '... More' text which presents a fullscreen Description View Controller
+# TvOSMoreButton
+#### A basic tvOS button which truncates long text with '... More'. 
 
-![](Artwork/example.gif)
+![](https://github.com/cgoldsby/TvOSMoreButton/blob/master/Artwork/example.png)
