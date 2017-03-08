@@ -3,7 +3,9 @@
 
 ![](https://github.com/cgoldsby/TvOSMoreButton/blob/master/Artwork/example.png)
 
-The TvOSMoreButton is a simple view which aims to mirror the behavior of Apple's "... More" button; as seen in the Movie App. If the text is too long to fit with in the button bounds then the text will be truncated and '... More' will be appended. If the text fits with in the bounds of the button then the button is not focusable.
+The TvOSMoreButton is a simple view which aims to mirror the behavior of Apple's "... More" button; as seen in the Movie App. 
+
+If the text is too long to fit with in the button bounds then the text will be truncated and '... More' will be appended. If the text fits with in the bounds of the button then the button is not focusable.
 
 When the button is focused, pressing the select on the remote will trigger a callback.
 
