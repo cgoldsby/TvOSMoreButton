@@ -12,7 +12,7 @@
 		EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699141DB938C700D1818C /* LocalizedStrings.swift */; };
 		EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699151DB938C700D1818C /* String+Truncation.swift */; };
 		EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699161DB938C700D1818C /* UIView+Autolayout.swift */; };
-		EBA699221DB938C700D1818C /* ExpandingDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */; };
+		EBA699221DB938C700D1818C /* TvOSMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */; };
 		EBA699281DB93A5A00D1818C /* TvOSMoreButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA699101DB938C700D1818C /* TvOSMoreButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBA6992D1DB956E700D1818C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBA6992C1DB956E700D1818C /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 		EBA699141DB938C700D1818C /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		EBA699151DB938C700D1818C /* String+Truncation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Truncation.swift"; sourceTree = "<group>"; };
 		EBA699161DB938C700D1818C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
-		EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingDescriptionView.swift; sourceTree = "<group>"; };
+		EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvOSMoreButton.swift; sourceTree = "<group>"; };
 		EBA699251DB938D100D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA6992C1DB956E700D1818C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +128,7 @@
 		EBA6991A1DB938C700D1818C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EBA6991B1DB938C700D1818C /* ExpandingDescriptionView.swift */,
+				EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 			files = (
 				EB52FF2C1DBCF6AA00F97D2B /* BundleLoader.swift in Sources */,
 				EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */,
-				EBA699221DB938C700D1818C /* ExpandingDescriptionView.swift in Sources */,
+				EBA699221DB938C700D1818C /* TvOSMoreButton.swift in Sources */,
 				EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */,
 				EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */,
 			);

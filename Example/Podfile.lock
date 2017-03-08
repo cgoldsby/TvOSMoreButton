@@ -1,16 +1,19 @@
 PODS:
-  - ExpandingDescriptionView (0.0.2)
+  - TvOSMoreButton (1.0.0)
+  - TvOSTextViewer (0.0.2)
 
 DEPENDENCIES:
-  - ExpandingDescriptionView (from `..`)
+  - TvOSMoreButton (from `..`)
+  - TvOSTextViewer
 
 EXTERNAL SOURCES:
-  ExpandingDescriptionView:
+  TvOSMoreButton:
     :path: ".."
 
 SPEC CHECKSUMS:
-  ExpandingDescriptionView: d6c7ec51d8f9abc278efb951547224ee2a0ce711
+  TvOSMoreButton: 87d920712ad5a4c211c50cb948cda28c0f181dd0
+  TvOSTextViewer: e35edcc34f24e9d65cfe533c590fd737989ba33b
 
-PODFILE CHECKSUM: 417bb2b90bfc78fa65452d7d5e49efa551ec0d3f
+PODFILE CHECKSUM: 8db7f68b2b9fbe2c4836160ef83696b0845e4a1f
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
