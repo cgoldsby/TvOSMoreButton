@@ -42,7 +42,7 @@ Check out the Example workspace for more details.
 
 If you would like to display a fullscreen view with just the text then definately check out [@dcordero](https://github.com/dcordero) awesome [TvOSTextViewer](https://github.com/dcordero/TvOSTextViewer). So good!
 
-Special thanks [@mona-zsh](https://github.com/mona-zsh) for her article on [String Truncation](http://eskimona.com/coding/objective-c/2015/05/10/truncation.html)
+Special thanks [@mona-zsh](https://github.com/mona-zsh) for her article on [String Truncation](http://eskimona.com/coding/objective-c/2015/05/10/truncation.html).
 
 
 Feel free to submit an issues or PRs. ❤️
