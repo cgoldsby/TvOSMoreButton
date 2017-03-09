@@ -26,7 +26,7 @@ import Foundation
 
 extension String {
     
-    enum ExpandingDescription {
+    enum TvOSMoreButton {
         case ellipses
         case more
         
@@ -36,7 +36,7 @@ extension String {
                 return "…"
             case .more:
                 return NSLocalizedString(
-                    "ExpandingDescription.More.Text",
+                    "TvOSMoreButton.More.Text",
                     bundle: BundleLoader.main,
                     comment: "Text that appears after a long description in a label."
                     ).uppercased()

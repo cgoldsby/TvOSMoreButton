@@ -7,4 +7,4 @@
 */
 
 /* Text that appears after a long description in a label */
-"ExpandingDescription.More.Text" = "More";
+"TvOSMoreButton.More.Text" = "More";

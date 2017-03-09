@@ -51,8 +51,8 @@ open class TvOSMoreButton: UIView {
         }
     }
     
-    open var ellipsesString = String.ExpandingDescription.ellipses.🌍
-    open var trailingText = String.ExpandingDescription.more.🌍
+    open var ellipsesString = String.TvOSMoreButton.ellipses.🌍
+    open var trailingText = String.TvOSMoreButton.more.🌍
     open var trailingTextColor = UIColor.black.withAlphaComponent(0.5)
     open var trailingTextFont = UIFont.boldSystemFont(ofSize: 18)
     open var pressAnimationDuration = 0.1

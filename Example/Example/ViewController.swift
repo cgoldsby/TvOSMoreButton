@@ -42,7 +42,7 @@ final class ViewController: UIViewController {
         tvOSMoreButton.buttonWasPressed = moreButtonWasPressed
     }
     
-    private func moreButtonWasPressed(text: String?) -> Void {
+    private func moreButtonWasPressed(text: String?) {
         let viewController = TvOSTextViewerViewController()
         viewController.text = text
         viewController.textColor = .white
