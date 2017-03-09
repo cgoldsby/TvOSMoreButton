@@ -159,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB76C5BA1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "TvOSMoreButton" */;
 			buildPhases = (
+				EBEACC9C1E7158690075CBD3 /* [TvOSMoreButton] Linter */,
 				EB76C5A11DB5873B0014B8D5 /* Sources */,
 				EB76C5A21DB5873B0014B8D5 /* Frameworks */,
 				EB76C5A31DB5873B0014B8D5 /* Headers */,
@@ -177,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB76C5BD1DB5873B0014B8D5 /* Build configuration list for PBXNativeTarget "TvOSMoreButtonTests" */;
 			buildPhases = (
+				EBEACC9D1E7158A20075CBD3 /* [TvOSMoreButton] Linter */,
 				EB76C5AB1DB5873B0014B8D5 /* Sources */,
 				EB76C5AC1DB5873B0014B8D5 /* Frameworks */,
 				EB76C5AD1DB5873B0014B8D5 /* Resources */,
@@ -248,6 +250,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EBEACC9C1E7158690075CBD3 /* [TvOSMoreButton] Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[TvOSMoreButton] Linter";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		EBEACC9D1E7158A20075CBD3 /* [TvOSMoreButton] Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[TvOSMoreButton] Linter";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB76C5A11DB5873B0014B8D5 /* Sources */ = {
