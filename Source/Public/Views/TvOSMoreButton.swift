@@ -90,11 +90,11 @@ open class TvOSMoreButton: UIView {
         setUpUI()
     }
     
-    override open var intrinsicContentSize : CGSize {
+    override open var intrinsicContentSize: CGSize {
         return label.intrinsicContentSize
     }
     
-    override open var canBecomeFocused : Bool {
+    override open var canBecomeFocused: Bool {
         return isFocusable
     }
     
