@@ -43,7 +43,7 @@ pod 'TvOSMoreButton'
 Please check out the Example workspace for more details.
 
 ```swift
-   import TvOSMoreButton
+    import TvOSMoreButton
 
     private func setUpUI() {
         tvOSMoreButton.text = // Super long text
