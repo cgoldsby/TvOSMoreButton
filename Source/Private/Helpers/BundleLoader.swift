@@ -28,8 +28,17 @@ final class BundleLoader {
     
     static let main: Bundle = {
         let podBundle = Bundle(for: BundleLoader.self)
-        if let url = podBundle.url(forResource: String(describing: TvOSMoreButton.self), withExtension: "bundle"),
-            let bundle = Bundle(url: url) {
+        
+        guard let url = podBundle.url(forResource: String(describing: TvOSMoreButton.self), withExtension: "bundle"),
+            let resourceBundle = Bundle(url: url) else { return .main }
+        
+        if let language = Locale.current.languageCode,
+            let url = resourceBundle.path(forResource: language, ofType: "lproj"),
+            let bundle = Bundle(path: url) {
+            return bundle
+        }
+        else if let url = resourceBundle.path(forResource: "en", ofType: "lproj"),
+            let bundle = Bundle(path: url) {
             return bundle
         }
         else {

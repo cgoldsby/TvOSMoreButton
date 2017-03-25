@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		EB52FF2C1DBCF6AA00F97D2B /* BundleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */; };
 		EB76C5B01DB5873B0014B8D5 /* TvOSMoreButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */; };
+		EB88B1FE1E86F6EC00CBAB27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB88B2001E86F6EC00CBAB27 /* Localizable.strings */; };
 		EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699141DB938C700D1818C /* LocalizedStrings.swift */; };
 		EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699151DB938C700D1818C /* String+Truncation.swift */; };
 		EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699161DB938C700D1818C /* UIView+Autolayout.swift */; };
 		EBA699221DB938C700D1818C /* TvOSMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */; };
 		EBA699281DB93A5A00D1818C /* TvOSMoreButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA699101DB938C700D1818C /* TvOSMoreButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EBA6992D1DB956E700D1818C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBA6992C1DB956E700D1818C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,11 @@
 		EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleLoader.swift; sourceTree = "<group>"; };
 		EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvOSMoreButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76C5AF1DB5873B0014B8D5 /* TvOSMoreButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvOSMoreButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB88B1FF1E86F6EC00CBAB27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB88B2011E86F70300CBAB27 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB88B2021E86F70800CBAB27 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB88B2031E86F71300CBAB27 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB88B2041E86F72100CBAB27 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBA699101DB938C700D1818C /* TvOSMoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TvOSMoreButton.h; sourceTree = "<group>"; };
 		EBA699111DB938C700D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA699141DB938C700D1818C /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -38,7 +43,6 @@
 		EBA699161DB938C700D1818C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvOSMoreButton.swift; sourceTree = "<group>"; };
 		EBA699251DB938D100D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBA6992C1DB956E700D1818C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,7 @@
 		EBA6990E1DB938C700D1818C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EBA6992C1DB956E700D1818C /* Localizable.strings */,
+				EB88B2001E86F6EC00CBAB27 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -221,6 +225,10 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
+				de,
+				it,
+				es,
 			);
 			mainGroup = EB76C59C1DB5873B0014B8D5;
 			productRefGroup = EB76C5A71DB5873B0014B8D5 /* Products */;
@@ -238,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB88B1FE1E86F6EC00CBAB27 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +254,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA6992D1DB956E700D1818C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,11 +320,27 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		EB88B2001E86F6EC00CBAB27 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB88B1FF1E86F6EC00CBAB27 /* en */,
+				EB88B2011E86F70300CBAB27 /* fr */,
+				EB88B2021E86F70800CBAB27 /* de */,
+				EB88B2031E86F71300CBAB27 /* it */,
+				EB88B2041E86F72100CBAB27 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		EB76C5B81DB5873B0014B8D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -370,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
