@@ -11,13 +11,13 @@ Released on 2017-03-25.
 
 No API changes.
 
-##### Added
+#### Added
 
 The `TvOSMoreButton` is now localized in:
 
-Español 🇩🇪
-French 🇫🇷
-Deutsch 🇪🇸
+Español 🇩🇪   
+French 🇫🇷  
+Deutsch 🇪🇸  
 Italian 🇮🇹
 
 ## [1.0.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.0.0)
