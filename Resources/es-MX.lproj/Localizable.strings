@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  TvOSMoreButton
+
+  Created by Christopher Goldsby on 10/20/16.
+  Copyright © 2016 Christopher Goldsby. All rights reserved.
+*/
+
+/* Text that appears after a long description in a label */
+"TvOSMoreButton.More.Text" = "Más";

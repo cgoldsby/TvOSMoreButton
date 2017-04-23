@@ -3,7 +3,23 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101)
+- `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.0.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.0.2)
+Released on 2017-04-233.
+#### Support More Localizations: 🇲🇽, 🇯🇵, 🇳🇱, 🇳🇴, 🇷🇺
+
+No API changes.
+
+#### Added
+
+The `TvOSMoreButton` is now localized in:
+
+Español Mexicano 🇲🇽   
+Japanese 🇯🇵  
+Dutch 🇳🇱  
+Norwegian 🇳🇴
+Russian 🇷🇺
 
 ## [1.0.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.0.1)
 Released on 2017-03-25.

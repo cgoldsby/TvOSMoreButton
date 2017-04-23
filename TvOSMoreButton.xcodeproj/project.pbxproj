@@ -43,6 +43,11 @@
 		EBA699161DB938C700D1818C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvOSMoreButton.swift; sourceTree = "<group>"; };
 		EBA699251DB938D100D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBAD63A41EAD70E00007B48B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBAD63A51EAD71B20007B48B /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBAD63A61EAD71E50007B48B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EBAD63A71EAD72210007B48B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBAD63A81EAD72B00007B48B /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +234,11 @@
 				de,
 				it,
 				es,
+				ja,
+				nb,
+				"es-MX",
+				ru,
+				nl,
 			);
 			mainGroup = EB76C59C1DB5873B0014B8D5;
 			productRefGroup = EB76C5A71DB5873B0014B8D5 /* Products */;
@@ -329,6 +339,11 @@
 				EB88B2021E86F70800CBAB27 /* de */,
 				EB88B2031E86F71300CBAB27 /* it */,
 				EB88B2041E86F72100CBAB27 /* es */,
+				EBAD63A41EAD70E00007B48B /* ja */,
+				EBAD63A51EAD71B20007B48B /* nb */,
+				EBAD63A61EAD71E50007B48B /* es-MX */,
+				EBAD63A71EAD72210007B48B /* ru */,
+				EBAD63A81EAD72B00007B48B /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
