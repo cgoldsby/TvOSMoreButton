@@ -25,7 +25,7 @@ The majority of the UI properties are configurable; like
 ## Requirements
 
 - tvOS 9.0+
-- Xcode 8.2
+- Xcode 9
 
 ## Installation
 

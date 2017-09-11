@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TvOSMoreButton'
-  s.authors = { 'Chris Goldsby' => 'cgoldsby@gmail.com'}
+  s.authors = { 'Chris Goldsby' => 'cgoldsby@gmail.com' }
   s.version = '1.0.2'
   s.license = 'MIT'
   s.summary = 'tvOS \'... More\' Button'
