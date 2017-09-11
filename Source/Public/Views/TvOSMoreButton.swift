@@ -130,7 +130,7 @@ open class TvOSMoreButton: UIView {
         }
     }
     
-    // MARK - Private
+    // MARK: - Private
     
     private func setUpUI() {
         setUpView()
