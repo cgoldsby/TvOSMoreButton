@@ -66,17 +66,17 @@ open class TvOSMoreButton: UIView {
     open var focusedViewAlpha = CGFloat(0.75)
     open var buttonWasPressed: ((String?) -> Void)?
     
-    private var textAttributes: [String : Any] {
+    private var textAttributes: [NSAttributedStringKey : Any] {
         return [
-            NSForegroundColorAttributeName: textColor,
-            NSFontAttributeName: font
+            NSAttributedStringKey.foregroundColor: textColor,
+            NSAttributedStringKey.font: font
         ]
     }
     
-    private var trailingTextAttributes: [String : Any] {
+    private var trailingTextAttributes: [NSAttributedStringKey : Any] {
         return [
-            NSForegroundColorAttributeName: trailingTextColor,
-            NSFontAttributeName: trailingTextFont
+            NSAttributedStringKey.foregroundColor: trailingTextColor,
+            NSAttributedStringKey.font: trailingTextFont
         ]
     }
     

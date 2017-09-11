@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13189.4" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-b5-Qoi" customClass="TvOSMoreButton" customModule="TvOSMoreButton">
-                                <rect key="frame" x="100" y="428" width="750" height="225"/>
+                                <rect key="frame" x="190" y="428" width="750" height="225"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="Boz-gC-SnZ"/>
@@ -34,7 +34,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFI-VH-W5z">
-                                <rect key="frame" x="100" y="340" width="160" height="38"/>
+                                <rect key="frame" x="190" y="340" width="160" height="38"/>
                                 <attributedString key="attributedText">
                                     <fragment content="★★★★">
                                         <attributes>
@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to the Future" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9t-WM-j8a">
-                                <rect key="frame" x="100" y="272" width="428" height="60"/>
+                                <rect key="frame" x="190" y="272" width="418" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -64,12 +64,14 @@
                             <constraint firstItem="9SK-b5-Qoi" firstAttribute="top" secondItem="XFI-VH-W5z" secondAttribute="bottom" constant="50" id="3De-CG-yO0"/>
                             <constraint firstItem="XFI-VH-W5z" firstAttribute="top" secondItem="s9t-WM-j8a" secondAttribute="bottom" constant="8" id="B0S-5Q-GI0"/>
                             <constraint firstItem="o80-jq-HRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EZP-oq-Txa"/>
-                            <constraint firstItem="o80-jq-HRf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Eet-YF-7NW"/>
+                            <constraint firstItem="o80-jq-HRf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Eet-YF-7NW"/>
                             <constraint firstItem="9SK-b5-Qoi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PJv-tV-eje"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XFI-VH-W5z" secondAttribute="trailing" constant="20" symbolic="YES" id="eje-ZM-kxh"/>
                             <constraint firstItem="9SK-b5-Qoi" firstAttribute="leading" secondItem="XFI-VH-W5z" secondAttribute="leading" id="hEW-zU-FkR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o80-jq-HRf" secondAttribute="bottom" id="jFj-3y-qfU"/>
+                            <constraint firstAttribute="bottom" secondItem="o80-jq-HRf" secondAttribute="bottom" id="jFj-3y-qfU"/>
                             <constraint firstItem="9SK-b5-Qoi" firstAttribute="leading" secondItem="s9t-WM-j8a" secondAttribute="leading" id="qJ5-3S-Et1"/>
                             <constraint firstItem="9SK-b5-Qoi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="qyx-kn-2Rb"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s9t-WM-j8a" secondAttribute="trailing" constant="20" symbolic="YES" id="tnZ-4D-pww"/>
                             <constraint firstItem="9SK-b5-Qoi" firstAttribute="leading" secondItem="s9t-WM-j8a" secondAttribute="leading" id="zxI-6o-WTQ"/>
                         </constraints>
                     </view>
