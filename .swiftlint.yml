@@ -7,6 +7,7 @@ disabled_rules:
 
 excluded:
   - Carthage
+  - Pods
   - Example/Pods
 
 colon:
