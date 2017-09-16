@@ -2,21 +2,41 @@
 All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
-#### 2.x Releases
-- `2.0.x` Releases - [2.0.0](#200)
-
 #### 1.x Releases
+- `1.1.x` Releases - [1.1.0](#110)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
-## [2.0.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/2.0.0)
-Released on 2017-09-12.
-### Swift 4 and Xcode 9 🎉
+## [1.1.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.0)
+Released on 2017-09-16.
+### Swift 4 and Xcode 9
 
-**Swift 4 is now required**
+**Xcode 9 and 3.2+ is now required.**
 
-However, release [1.0.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.0.2) is still compatible with Xcode 8.2 and Xcode 9 and Swift 3.2.
+**Changes**
+
+This library has been migrated to Swift 4.
 
 No API changes.
+
+**Swift 3.2 Support**
+
+If your project is using Swift 3.2, you can still use this release by overriding the `SWIFT_VERSION` to be 4.0 in your Podfile.
+
+```ruby
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == 'TvOSMoreButton'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.0'
+            end
+        end
+    end
+end
+```
+
+ Or, you can use the previous release, [1.0.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.0.2), which does not require the `post_install` hook and will compile just fine with Xcode 9 and Swift 3.2.
+
+🎉
 
 ## [1.0.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.0.2)
 Released on 2017-04-23.
