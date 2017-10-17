@@ -23,48 +23,48 @@
 //
 
 import Foundation
-
+@objc
 open class TvOSMoreButton: UIView {
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
     private var isFocusable = false
     
-    open var text: String? {
+    @objc open var text: String? {
         
         didSet {
             updateUI()
         }
     }
     
-    open var textColor = UIColor.white {
+    @objc open var textColor = UIColor.white {
         
         didSet {
             label.textColor = textColor
         }
     }
     
-    open var font = UIFont.systemFont(ofSize: 25) {
+    @objc open var font = UIFont.systemFont(ofSize: 25) {
         
         didSet {
             label.font = font
         }
     }
     
-    open var ellipsesString = String.TvOSMoreButton.ellipses.🌍
-    open var trailingText = String.TvOSMoreButton.more.🌍
-    open var trailingTextColor = UIColor.black.withAlphaComponent(0.5)
-    open var trailingTextFont = UIFont.boldSystemFont(ofSize: 18)
-    open var pressAnimationDuration = 0.1
-    open var labelMargin = CGFloat(12.0)
-    open var cornerRadius = CGFloat(10.0)
-    open var focusedScaleFactor = CGFloat(1.05)
-    open var shadowRadius = CGFloat(10)
-    open var shadowColor = UIColor.black.cgColor
-    open var focusedShadowOffset = CGSize(width: 0, height: 27)
-    open var focusedShadowOpacity = Float(0.75)
-    open var focusedViewAlpha = CGFloat(0.75)
-    open var buttonWasPressed: ((String?) -> Void)?
+    @objc open var ellipsesString = String.TvOSMoreButton.ellipses.🌍
+    @objc open var trailingText = String.TvOSMoreButton.more.🌍
+    @objc open var trailingTextColor = UIColor.black.withAlphaComponent(0.5)
+    @objc open var trailingTextFont = UIFont.boldSystemFont(ofSize: 18)
+    @objc open var pressAnimationDuration = 0.1
+    @objc open var labelMargin = CGFloat(12.0)
+    @objc open var cornerRadius = CGFloat(10.0)
+    @objc open var focusedScaleFactor = CGFloat(1.05)
+    @objc open var shadowRadius = CGFloat(10)
+    @objc open var shadowColor = UIColor.black.cgColor
+    @objc open var focusedShadowOffset = CGSize(width: 0, height: 27)
+    @objc open var focusedShadowOpacity = Float(0.75)
+    @objc open var focusedViewAlpha = CGFloat(0.75)
+    @objc open var buttonWasPressed: ((String?) -> Void)?
     
     private var textAttributes: [NSAttributedStringKey : Any] {
         return [
