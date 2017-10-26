@@ -3,8 +3,22 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.1.x` Releases - [1.1.0](#110)
+- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.1.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.1)
+Released on 2017-10-26.
+### Improved Carthage Documentation, Objective-C Support, & Deprecated Warning Fixes
+
+No API changes.
+
+* Document installation via Carthage (#8) via David Cordero
+* Objective-C Support (#9) via André Silva
+* Fix "characters was deprecated" warning (#10) via David Cordero
+
+What a great release! Personal thanks to everyone who contributed! 🙇
+
+Have a Happy Fall everyone! 🍂
 
 ## [1.1.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.0)
 Released on 2017-09-16.
