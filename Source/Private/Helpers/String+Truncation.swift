@@ -38,9 +38,9 @@ extension String {
                                                              trailingText: trailingText,
                                                              attributes: attributes,
                                                              minIndex: 0,
-                                                             maxIndex: characters.count)
+                                                             maxIndex: count)
             
-            let range = startIndex..<characters.index(startIndex, offsetBy: indexOfLastCharacterThatFits)
+            let range = startIndex..<index(startIndex, offsetBy: indexOfLastCharacterThatFits)
             let substring = self[range]
             let attributedString = NSMutableAttributedString(string: substring + ellipsesString, attributes: attributes)
             let attributedTrailingString = NSAttributedString(string: trailingText, attributes: trailingTextAttributes)
@@ -77,7 +77,7 @@ extension String {
         guard maxIndex - minIndex != 1 else { return minIndex }
         
         let midIndex = (minIndex + maxIndex) / 2
-        let range = startIndex..<characters.index(startIndex, offsetBy: midIndex)
+        let range = startIndex..<index(startIndex, offsetBy: midIndex)
         let substring = String(self[range])
         
         if !substring.willFit(to: size, ellipsesString: ellipsesString, trailingText: trailingText, attributes: attributes) {
