@@ -43,9 +43,9 @@ final class ViewController: UIViewController {
     }
     
     private func moreButtonWasPressed(text: String?) {
+        guard let text = text else { return }
         let viewController = TvOSTextViewerViewController()
         viewController.text = text
-        viewController.textColor = .white
         viewController.textEdgeInsets = UIEdgeInsets(top: 100, left: 250, bottom: 100, right: 250)
         present(viewController, animated: true)
     }
