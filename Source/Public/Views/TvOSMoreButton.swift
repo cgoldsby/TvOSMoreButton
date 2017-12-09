@@ -202,13 +202,13 @@ open class TvOSMoreButton: UIView {
     }
 
     private func applyPressUpAppearance() {
-        UIView.animate(withDuration: pressAnimationDuration, animations: {
+        UIView.animate(withDuration: pressAnimationDuration) {
             self.applyFocusedAppearance()
         }
     }
 
     private func applyPressDownAppearance() {
-        UIView.animate(withDuration: pressAnimationDuration, animations: {
+        UIView.animate(withDuration: pressAnimationDuration) {
             self.transform = CGAffineTransform.identity
             self.focusedView.layer.shadowOffset = .zero
             self.focusedView.layer.shadowOpacity = 0
