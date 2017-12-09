@@ -25,10 +25,10 @@
 import UIKit
 
 extension UIView {
-    
+
     func pinEdgesToSuperviewEdges(insets: UIEdgeInsets = .zero) {
         guard let superview = superview else { return }
-        
+
         translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: insets.top)
         let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom)

@@ -25,13 +25,13 @@
 import Foundation
 
 final class BundleLoader {
-    
+
     static let main: Bundle = {
         let podBundle = Bundle(for: BundleLoader.self)
-        
+
         guard let url = podBundle.url(forResource: String(describing: TvOSMoreButton.self), withExtension: "bundle"),
             let resourceBundle = Bundle(url: url) else { return .main }
-        
+
         if let language = Locale.current.languageCode,
             let url = resourceBundle.path(forResource: language, ofType: "lproj"),
             let bundle = Bundle(path: url) {
