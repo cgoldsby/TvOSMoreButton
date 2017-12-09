@@ -23,34 +23,35 @@
 //
 
 import Foundation
+
 @objc
 open class TvOSMoreButton: UIView {
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
     private var isFocusable = false
-    
+
     @objc open var text: String? {
-        
+
         didSet {
             updateUI()
         }
     }
-    
+
     @objc open var textColor = UIColor.white {
-        
+
         didSet {
             label.textColor = textColor
         }
     }
-    
+
     @objc open var font = UIFont.systemFont(ofSize: 25) {
-        
+
         didSet {
             label.font = font
         }
     }
-    
+
     @objc open var ellipsesString = String.TvOSMoreButton.ellipses.🌍
     @objc open var trailingText = String.TvOSMoreButton.more.🌍
     @objc open var trailingTextColor = UIColor.black.withAlphaComponent(0.5)
@@ -65,73 +66,73 @@ open class TvOSMoreButton: UIView {
     @objc open var focusedShadowOpacity = Float(0.75)
     @objc open var focusedViewAlpha = CGFloat(0.75)
     @objc open var buttonWasPressed: ((String?) -> Void)?
-    
+
     private var textAttributes: [NSAttributedStringKey : Any] {
         return [
             NSAttributedStringKey.foregroundColor: textColor,
             NSAttributedStringKey.font: font
         ]
     }
-    
+
     private var trailingTextAttributes: [NSAttributedStringKey : Any] {
         return [
             NSAttributedStringKey.foregroundColor: trailingTextColor,
             NSAttributedStringKey.font: trailingTextFont
         ]
     }
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setUpUI()
     }
-    
+
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpUI()
     }
-    
+
     override open var intrinsicContentSize: CGSize {
         return label.intrinsicContentSize
     }
-    
+
     override open var canBecomeFocused: Bool {
         return isFocusable
     }
-    
+
     override open func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         coordinator.addCoordinatedAnimations({
             self.isFocused ? self.applyFocusedAppearance() : self.applyUnfocusedAppearance()
         })
     }
-    
+
     open func updateUI() {
         truncateAndUpdateText()
     }
-    
+
     // MARK: - Presses
-    
+
     override open func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         super.pressesBegan(presses, with: event)
         for item in presses where item.type == .select {
             applyPressDownAppearance()
         }
     }
-    
+
     override open func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         super.pressesEnded(presses, with: event)
         for item in presses where item.type == .select {
             applyPressUpAppearance()
         }
     }
-    
+
     override open func pressesCancelled(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         for item in presses where item.type == .select {
             applyPressUpAppearance()
         }
     }
-    
+
     // MARK: - Private
-    
+
     private func setUpUI() {
         setUpView()
         setUpFocusedView()
@@ -139,88 +140,88 @@ open class TvOSMoreButton: UIView {
         setUpSelectGestureRecognizer()
         applyUnfocusedAppearance()
     }
-    
+
     private func setUpView() {
         isUserInteractionEnabled = true
         backgroundColor = .clear
         clipsToBounds = false
     }
-    
+
     private func setUpLabel() {
         label = UILabel()
         label.numberOfLines = 0
         addSubview(label)
-        
+
         let labelInsets = UIEdgeInsets(top: labelMargin, left: labelMargin, bottom: labelMargin, right:labelMargin)
         label.pinEdgesToSuperviewEdges(insets: labelInsets)
     }
-    
+
     private func setUpFocusedView() {
         focusedView = UIView()
         focusedView.layer.cornerRadius = cornerRadius
         focusedView.layer.shadowColor = shadowColor
         focusedView.layer.shadowRadius = shadowRadius
-        
+
         addSubview(focusedView)
         focusedView.pinEdgesToSuperviewEdges()
-        
+
         let blurEffect = UIBlurEffect(style: .light)
         let blurredView = UIVisualEffectView(effect: blurEffect)
         blurredView.alpha = focusedViewAlpha
         blurredView.layer.cornerRadius = cornerRadius
         blurredView.layer.masksToBounds = true
-        
+
         focusedView.addSubview(blurredView)
         blurredView.pinEdgesToSuperviewEdges()
     }
-    
+
     private func setUpSelectGestureRecognizer() {
         selectGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectGestureWasPressed))
         selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.select.rawValue)]
         addGestureRecognizer(selectGestureRecognizer)
     }
-    
+
     @objc private func selectGestureWasPressed() {
         buttonWasPressed?(text)
     }
-    
+
     // MARK: - Focus Appearance
-    
+
     private func applyFocusedAppearance() {
         transform = CGAffineTransform(scaleX: focusedScaleFactor, y: focusedScaleFactor)
         focusedView.layer.shadowOffset = focusedShadowOffset
         focusedView.layer.shadowOpacity = focusedShadowOpacity
         focusedView.alpha = 1
     }
-    
+
     private func applyUnfocusedAppearance() {
         transform = CGAffineTransform.identity
         focusedView.layer.shadowOffset = .zero
         focusedView.layer.shadowOpacity = 0
         focusedView.alpha = 0
     }
-    
+
     private func applyPressUpAppearance() {
-        UIView.animate(withDuration: pressAnimationDuration, animations: {
+        UIView.animate(withDuration: pressAnimationDuration) {
             self.applyFocusedAppearance()
-        })
+        }
     }
-    
+
     private func applyPressDownAppearance() {
-        UIView.animate(withDuration: pressAnimationDuration, animations: {
+        UIView.animate(withDuration: pressAnimationDuration) {
             self.transform = CGAffineTransform.identity
             self.focusedView.layer.shadowOffset = .zero
             self.focusedView.layer.shadowOpacity = 0
-        })
+        }
     }
-    
+
     // MARK: - Truncating Text
-    
+
     private func truncateAndUpdateText() {
         label.text = text
-        
+
         guard let text = text, !text.isEmpty else { return }
-        
+
         layoutIfNeeded()
         let labelSize = label.bounds.size
         let trailingText = " " + self.trailingText

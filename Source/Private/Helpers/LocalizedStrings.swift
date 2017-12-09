@@ -25,11 +25,11 @@
 import Foundation
 
 extension String {
-    
+
     enum TvOSMoreButton {
         case ellipses
         case more
-        
+
         var 🌍: String {
             switch self {
             case .ellipses:

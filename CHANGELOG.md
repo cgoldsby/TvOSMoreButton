@@ -3,8 +3,18 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
+- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.1.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.2)
+Released on 2017-12-09.
+### Code style updates
+
+No API changes.
+
+* Code style updates (#13) via Chris Goldsby
+
+Have a Happy Holidays everyone! Ho ho ho. 🎅
 
 ## [1.1.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.1)
 Released on 2017-10-26.
