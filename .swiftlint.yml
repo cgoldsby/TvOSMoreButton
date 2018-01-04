@@ -3,6 +3,7 @@ disabled_rules:
   - identifier_name
   - line_length
   - statement_position
+  - trailing_whitespace
 
 excluded:
   - Carthage
