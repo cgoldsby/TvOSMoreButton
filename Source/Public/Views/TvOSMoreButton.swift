@@ -29,7 +29,16 @@ open class TvOSMoreButton: UIView {
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
-    private var isFocusable = false
+    private var isFocusable = false {
+        didSet {
+            if isFocusable {
+                accessibilityTraits &= ~UIAccessibilityTraitNotEnabled
+            }
+            else {
+                accessibilityTraits |= UIAccessibilityTraitNotEnabled
+            }
+        }
+    }
 
     @objc open var text: String? {
 
@@ -69,15 +78,15 @@ open class TvOSMoreButton: UIView {
 
     private var textAttributes: [NSAttributedStringKey : Any] {
         return [
-            NSAttributedStringKey.foregroundColor: textColor,
-            NSAttributedStringKey.font: font
+            .foregroundColor: textColor,
+            .font: font
         ]
     }
 
     private var trailingTextAttributes: [NSAttributedStringKey : Any] {
         return [
-            NSAttributedStringKey.foregroundColor: trailingTextColor,
-            NSAttributedStringKey.font: trailingTextFont
+            .foregroundColor: trailingTextColor,
+            .font: trailingTextFont
         ]
     }
 
@@ -145,6 +154,10 @@ open class TvOSMoreButton: UIView {
         isUserInteractionEnabled = true
         backgroundColor = .clear
         clipsToBounds = false
+        isAccessibilityElement = true
+        accessibilityTraits = UIAccessibilityTraitButton
+        accessibilityIdentifier = "tvos more button"
+        isFocusable = false
     }
 
     private func setUpLabel() {
@@ -219,6 +232,7 @@ open class TvOSMoreButton: UIView {
 
     private func truncateAndUpdateText() {
         label.text = text
+        accessibilityLabel = text
 
         guard let text = text, !text.isEmpty else { return }
 
@@ -230,6 +244,7 @@ open class TvOSMoreButton: UIView {
                                                    trailingText: trailingText,
                                                    attributes: textAttributes,
                                                    trailingTextAttributes: trailingTextAttributes)
+        accessibilityLabel = label.attributedText?.string
         isFocusable = !text.willFit(to: labelSize, attributes: textAttributes)
     }
 }

@@ -7,14 +7,15 @@ All notable changes to this project will be documented in this file.
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ## [1.1.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.2)
-Released on 2017-12-09.
-### Code style updates
+Released on 2018-05-20.
+### Accessibility Updates ♿︎
 
 No API changes.
 
+* Add UIAccessibility (#14) via Chris Goldsby
 * Code style updates (#13) via Chris Goldsby
 
-Have a Happy Holidays everyone! Ho ho ho. 🎅
+Have a Spring everyone! 🌻
 
 ## [1.1.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.1)
 Released on 2017-10-26.
