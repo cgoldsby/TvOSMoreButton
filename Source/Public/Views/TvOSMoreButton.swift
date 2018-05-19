@@ -69,15 +69,15 @@ open class TvOSMoreButton: UIView {
 
     private var textAttributes: [NSAttributedStringKey : Any] {
         return [
-            NSAttributedStringKey.foregroundColor: textColor,
-            NSAttributedStringKey.font: font
+            .foregroundColor: textColor,
+            .font: font
         ]
     }
 
     private var trailingTextAttributes: [NSAttributedStringKey : Any] {
         return [
-            NSAttributedStringKey.foregroundColor: trailingTextColor,
-            NSAttributedStringKey.font: trailingTextFont
+            .foregroundColor: trailingTextColor,
+            .font: trailingTextFont
         ]
     }
 
