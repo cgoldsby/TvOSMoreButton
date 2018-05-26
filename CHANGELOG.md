@@ -15,7 +15,7 @@ No API changes.
 * Add UIAccessibility (#14) via Chris Goldsby
 * Code style updates (#13) via Chris Goldsby
 
-Have a Spring everyone! 🌻
+Have a Happy Spring everyone! 🌻
 
 ## [1.1.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.1)
 Released on 2017-10-26.
