@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ## [1.1.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.2)
-Released on 2018-05-20.
+Released on 2018-05-26.
 ### Accessibility Updates ♿️
 
 No API changes.
