@@ -83,7 +83,10 @@ Please check out the Example workspace for more details.
 
     private func setUpUI() {
         tvOSMoreButton.text = // Super long text
-        tvOSMoreButton.buttonWasPressed = moreButtonWasPressed
+        tvOSMoreButton.buttonWasPressed = {
+            [weak self] text in
+            moreButtonWasPressed(text: text)
+        }
     }
 
     private func moreButtonWasPressed(text: String?) -> Void {
