@@ -85,7 +85,7 @@ Please check out the Example workspace for more details.
         tvOSMoreButton.text = // Super long text
         tvOSMoreButton.buttonWasPressed = {
             [weak self] text in
-            moreButtonWasPressed(text: text)
+            self?.moreButtonWasPressed(text: text)
         }
     }
 
