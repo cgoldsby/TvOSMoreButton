@@ -3,8 +3,18 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112)
+- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.1.3](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.3)
+Released on 2018-09-01.
+### Bug Fixes 🐛
+
+No API changes.
+
+* Update UI whenever `trailingText` & `ellipsesString` changes via Chris Goldsby
+
+Have a Happy Fall everyone! 🍂
 
 ## [1.1.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.2)
 Released on 2018-05-26.
