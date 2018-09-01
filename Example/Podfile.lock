@@ -1,5 +1,5 @@
 PODS:
-  - TvOSMoreButton (1.1.1)
+  - TvOSMoreButton (1.1.3)
   - TvOSTextViewer (1.1.1)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - TvOSTextViewer
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - TvOSTextViewer
 
 EXTERNAL SOURCES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  TvOSMoreButton: 160649b4f722e7c4a3f97eeaf7840f23dcfcb4df
+  TvOSMoreButton: a0136644d89505d99519e5f8e1fbf676fad0a157
   TvOSTextViewer: e369c08f6ba3c021aa6b25aa7a948a9561984006
 
 PODFILE CHECKSUM: 8db7f68b2b9fbe2c4836160ef83696b0845e4a1f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
