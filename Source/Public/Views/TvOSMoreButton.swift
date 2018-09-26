@@ -60,6 +60,13 @@ open class TvOSMoreButton: UIView {
             label.font = font
         }
     }
+    
+    @objc open var textAlignment = NSTextAlignment.natural {
+        
+        didSet {
+            label.textAlignment = textAlignment
+        }
+    }
 
     @objc open var ellipsesString = String.TvOSMoreButton.ellipses.🌍 {
 
