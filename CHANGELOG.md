@@ -3,8 +3,18 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)
+- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)| [1.1.4](#114)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.1.4](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.4)
+Released on 2018-09-26.
+Added `textAlignment` property to improve right to left text support, e.g. Arabic language.
+
+* Added `textAlignment` (#18) via Furkan Hatipoglu
+
+Personal thanks to everyone who contributed! 🙇
+
+Almost October; may your Halloween be spooky! 🎃
 
 ## [1.1.3](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.3)
 Released on 2018-09-01.

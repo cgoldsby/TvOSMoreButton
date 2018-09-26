@@ -61,6 +61,13 @@ open class TvOSMoreButton: UIView {
         }
     }
 
+    @objc open var textAlignment = NSTextAlignment.natural {
+
+        didSet {
+            label.textAlignment = textAlignment
+        }
+    }
+
     @objc open var ellipsesString = String.TvOSMoreButton.ellipses.🌍 {
 
         didSet {
@@ -68,7 +75,7 @@ open class TvOSMoreButton: UIView {
         }
     }
 
-    @objc open var trailingText = String.TvOSMoreButton.more.🌍  {
+    @objc open var trailingText = String.TvOSMoreButton.more.🌍 {
 
         didSet {
             updateUI()
