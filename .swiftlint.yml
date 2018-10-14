@@ -9,6 +9,3 @@ excluded:
   - Carthage
   - Pods
   - Example/Pods
-
-colon:
-  apply_to_dictionaries: false

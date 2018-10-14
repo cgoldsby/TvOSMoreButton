@@ -95,14 +95,14 @@ open class TvOSMoreButton: UIView {
     @objc open var focusedViewAlpha = CGFloat(0.75)
     @objc open var buttonWasPressed: ((String?) -> Void)?
 
-    private var textAttributes: [NSAttributedString.Key : Any] {
+    private var textAttributes: [NSAttributedString.Key: Any] {
         return [
             .foregroundColor: textColor,
             .font: font
         ]
     }
 
-    private var trailingTextAttributes: [NSAttributedString.Key : Any] {
+    private var trailingTextAttributes: [NSAttributedString.Key: Any] {
         return [
             .foregroundColor: trailingTextColor,
             .font: trailingTextFont
@@ -184,7 +184,7 @@ open class TvOSMoreButton: UIView {
         label.numberOfLines = 0
         addSubview(label)
 
-        let labelInsets = UIEdgeInsets(top: labelMargin, left: labelMargin, bottom: labelMargin, right:labelMargin)
+        let labelInsets = UIEdgeInsets(top: labelMargin, left: labelMargin, bottom: labelMargin, right: labelMargin)
         label.pinEdgesToSuperviewEdges(insets: labelInsets)
     }
 
