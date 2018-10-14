@@ -32,10 +32,10 @@ open class TvOSMoreButton: UIView {
     private var isFocusable = false {
         didSet {
             if isFocusable {
-                accessibilityTraits &= ~UIAccessibilityTraitNotEnabled
+                accessibilityTraits.remove(.notEnabled)
             }
             else {
-                accessibilityTraits |= UIAccessibilityTraitNotEnabled
+                accessibilityTraits.insert(.notEnabled)
             }
         }
     }
@@ -174,7 +174,7 @@ open class TvOSMoreButton: UIView {
         backgroundColor = .clear
         clipsToBounds = false
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitButton
+        accessibilityTraits = UIAccessibilityTraits.button
         accessibilityIdentifier = "tvos more button"
         isFocusable = false
     }
@@ -209,7 +209,7 @@ open class TvOSMoreButton: UIView {
 
     private func setUpSelectGestureRecognizer() {
         selectGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectGestureWasPressed))
-        selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.select.rawValue)]
+        selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.select.rawValue)]
         addGestureRecognizer(selectGestureRecognizer)
     }
 
