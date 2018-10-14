@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
     git: 'https://github.com/cgoldsby/TvOSMoreButton.git',
     tag: s.version
   }
+  s.swift_version = '4.2'
   s.tvos.deployment_target = '9.0'
   s.source_files = 'Source/**/*.swift'
   s.resource_bundle = { 'TvOSMoreButton' => ['Resources/*.lproj'] }
