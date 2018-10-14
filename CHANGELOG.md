@@ -3,8 +3,18 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
+- `1.2.x` Releases - [1.2.0](#120)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)| [1.1.4](#114)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.2.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.4)
+Released on 2018-10-15.
+### Swift 4.2 🦉
+Support for building with Xcode 10 and Swift 4.2. This version requires Xcode 10 or later with Swift 4.2 compiler.
+
+No API changes.
+
+Have a great week everybody! 🎸
 
 ## [1.1.4](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.1.4)
 Released on 2018-09-26.

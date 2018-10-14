@@ -32,10 +32,10 @@ open class TvOSMoreButton: UIView {
     private var isFocusable = false {
         didSet {
             if isFocusable {
-                accessibilityTraits &= ~UIAccessibilityTraitNotEnabled
+                accessibilityTraits.remove(.notEnabled)
             }
             else {
-                accessibilityTraits |= UIAccessibilityTraitNotEnabled
+                accessibilityTraits.insert(.notEnabled)
             }
         }
     }
@@ -95,14 +95,14 @@ open class TvOSMoreButton: UIView {
     @objc open var focusedViewAlpha = CGFloat(0.75)
     @objc open var buttonWasPressed: ((String?) -> Void)?
 
-    private var textAttributes: [NSAttributedStringKey : Any] {
+    private var textAttributes: [NSAttributedString.Key: Any] {
         return [
             .foregroundColor: textColor,
             .font: font
         ]
     }
 
-    private var trailingTextAttributes: [NSAttributedStringKey : Any] {
+    private var trailingTextAttributes: [NSAttributedString.Key: Any] {
         return [
             .foregroundColor: trailingTextColor,
             .font: trailingTextFont
@@ -174,7 +174,7 @@ open class TvOSMoreButton: UIView {
         backgroundColor = .clear
         clipsToBounds = false
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitButton
+        accessibilityTraits = UIAccessibilityTraits.button
         accessibilityIdentifier = "tvos more button"
         isFocusable = false
     }
@@ -184,7 +184,7 @@ open class TvOSMoreButton: UIView {
         label.numberOfLines = 0
         addSubview(label)
 
-        let labelInsets = UIEdgeInsets(top: labelMargin, left: labelMargin, bottom: labelMargin, right:labelMargin)
+        let labelInsets = UIEdgeInsets(top: labelMargin, left: labelMargin, bottom: labelMargin, right: labelMargin)
         label.pinEdgesToSuperviewEdges(insets: labelInsets)
     }
 
@@ -209,7 +209,7 @@ open class TvOSMoreButton: UIView {
 
     private func setUpSelectGestureRecognizer() {
         selectGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectGestureWasPressed))
-        selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.select.rawValue)]
+        selectGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.select.rawValue)]
         addGestureRecognizer(selectGestureRecognizer)
     }
 
