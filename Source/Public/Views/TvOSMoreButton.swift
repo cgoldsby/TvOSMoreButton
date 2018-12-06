@@ -235,7 +235,7 @@ open class TvOSMoreButton: UIView {
 
     private func applyPressUpAppearance() {
         UIView.animate(withDuration: pressAnimationDuration) {
-            self.applyFocusedAppearance()
+            self.isFocused ? self.applyFocusedAppearance() : self.applyUnfocusedAppearance()
         }
     }
 
