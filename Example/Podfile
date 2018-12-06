@@ -4,7 +4,7 @@ platform :tvos, '9.0'
 use_frameworks!
 
 target 'Example' do
-  pod 'TvOSMoreButton', :path => '..'
+  pod 'TvOSMoreButton', path: '..'
   pod 'TvOSTextViewer'
 end
 
