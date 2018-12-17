@@ -35,7 +35,7 @@ extension String {
         if !willFit(to: size,
                     attributes: attributes,
                     trailingTextAttributes: trailingTextAttributes) {
-            
+
             let indexOfLastCharacterThatFits = indexThatFits(size: size,
                                                              ellipsesString: ellipsesString,
                                                              trailingText: trailingText,
@@ -62,11 +62,11 @@ extension String {
                  trailingText: String = "",
                  attributes: [NSAttributedString.Key: Any],
                  trailingTextAttributes: [NSAttributedString.Key: Any]) -> Bool {
-        
+
         let attributedString = NSMutableAttributedString(string: self + ellipsesString, attributes: attributes)
         let attributedTrailingString = NSAttributedString(string: trailingText, attributes: trailingTextAttributes)
         attributedString.append(attributedTrailingString)
-        
+
         let boundedSize = CGSize(width: size.width, height: .greatestFiniteMagnitude)
         let options: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
         let boundedRect = attributedString.boundingRect(with: boundedSize,
@@ -96,7 +96,7 @@ extension String {
                               trailingText: trailingText,
                               attributes: attributes,
                               trailingTextAttributes: trailingTextAttributes) {
-            
+
             return indexThatFits(size: size,
                                  ellipsesString: ellipsesString,
                                  trailingText: trailingText,
