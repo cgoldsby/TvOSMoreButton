@@ -32,11 +32,15 @@ extension String {
                         attributes: [NSAttributedString.Key: Any],
                         trailingTextAttributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
 
-        if !willFit(to: size, attributes: attributes) {
+        if !willFit(to: size,
+                    attributes: attributes,
+                    trailingTextAttributes: trailingTextAttributes) {
+            
             let indexOfLastCharacterThatFits = indexThatFits(size: size,
                                                              ellipsesString: ellipsesString,
                                                              trailingText: trailingText,
                                                              attributes: attributes,
+                                                             trailingTextAttributes: trailingTextAttributes,
                                                              minIndex: 0,
                                                              maxIndex: count)
 
@@ -56,12 +60,18 @@ extension String {
     func willFit(to size: CGSize,
                  ellipsesString: String = "",
                  trailingText: String = "",
-                 attributes: [NSAttributedString.Key: Any]) -> Bool {
-
-        let text = (self + ellipsesString + trailingText) as NSString
+                 attributes: [NSAttributedString.Key: Any],
+                 trailingTextAttributes: [NSAttributedString.Key: Any]) -> Bool {
+        
+        let attributedString = NSMutableAttributedString(string: self + ellipsesString, attributes: attributes)
+        let attributedTrailingString = NSAttributedString(string: trailingText, attributes: trailingTextAttributes)
+        attributedString.append(attributedTrailingString)
+        
         let boundedSize = CGSize(width: size.width, height: .greatestFiniteMagnitude)
         let options: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
-        let boundedRect = text.boundingRect(with: boundedSize, options: options, attributes: attributes, context: nil)
+        let boundedRect = attributedString.boundingRect(with: boundedSize,
+                                                        options: options,
+                                                        context: nil)
         return boundedRect.height <= size.height
     }
 
@@ -71,6 +81,7 @@ extension String {
                                ellipsesString: String,
                                trailingText: String,
                                attributes: [NSAttributedString.Key: Any],
+                               trailingTextAttributes: [NSAttributedString.Key: Any],
                                minIndex: Int,
                                maxIndex: Int) -> Int {
 
@@ -80,11 +91,17 @@ extension String {
         let range = startIndex..<index(startIndex, offsetBy: midIndex)
         let substring = String(self[range])
 
-        if !substring.willFit(to: size, ellipsesString: ellipsesString, trailingText: trailingText, attributes: attributes) {
+        if !substring.willFit(to: size,
+                              ellipsesString: ellipsesString,
+                              trailingText: trailingText,
+                              attributes: attributes,
+                              trailingTextAttributes: trailingTextAttributes) {
+            
             return indexThatFits(size: size,
                                  ellipsesString: ellipsesString,
                                  trailingText: trailingText,
                                  attributes: attributes,
+                                 trailingTextAttributes: trailingTextAttributes,
                                  minIndex: minIndex,
                                  maxIndex: midIndex)
         }
@@ -93,6 +110,7 @@ extension String {
                                  ellipsesString: ellipsesString,
                                  trailingText: trailingText,
                                  attributes: attributes,
+                                 trailingTextAttributes: trailingTextAttributes,
                                  minIndex: midIndex,
                                  maxIndex: maxIndex)
 
