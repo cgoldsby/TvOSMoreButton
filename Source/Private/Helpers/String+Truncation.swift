@@ -33,6 +33,8 @@ extension String {
                         trailingTextAttributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
 
         if !willFit(to: size,
+                    ellipsesString: ellipsesString,
+                    trailingText: trailingText,
                     attributes: attributes,
                     trailingTextAttributes: trailingTextAttributes) {
 
