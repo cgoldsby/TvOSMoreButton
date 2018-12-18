@@ -62,6 +62,13 @@ extension String {
                  trailingText: String = "",
                  attributes: [NSAttributedString.Key: Any],
                  trailingTextAttributes: [NSAttributedString.Key: Any]) -> Bool {
+        
+        var trailingTextAttributes = trailingTextAttributes
+        if let textFont = attributes[.font] as? UIFont,
+           let trailingTextFont = trailingTextAttributes[.font] as? UIFont,
+           trailingTextFont.lineHeight < textFont.lineHeight {
+            trailingTextAttributes[.font] = textFont
+        }
 
         let attributedString = NSMutableAttributedString(string: self + ellipsesString, attributes: attributes)
         let attributedTrailingString = NSAttributedString(string: trailingText, attributes: trailingTextAttributes)
