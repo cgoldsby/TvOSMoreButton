@@ -3,9 +3,20 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121)
+- `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121) | [1.2.2](#122)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)| [1.1.4](#114)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.2.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.2.2)
+Released on 2018-12-18.
+### Incorrect Trailing Text Bug Fix 🐞
+This release fixes a bug (#26) where the trailing text was being truncated.
+
+* Fixes a bug where the trailing text is being truncated (#28) via Roman Gritsuk
+
+Personal thanks to everyone who contributed! 🙇
+
+2019 is right around the corner! 😉 🎆
 
 ## [1.2.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.2.1)
 Released on 2018-12-06.
