@@ -62,7 +62,7 @@ extension String {
                  trailingText: String = "",
                  attributes: [NSAttributedString.Key: Any],
                  trailingTextAttributes: [NSAttributedString.Key: Any]) -> Bool {
-        
+
         var trailingTextAttributes = trailingTextAttributes
         if let textFont = attributes[.font] as? UIFont,
            let trailingTextFont = trailingTextAttributes[.font] as? UIFont,
