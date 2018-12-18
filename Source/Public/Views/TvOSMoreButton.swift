@@ -264,6 +264,8 @@ open class TvOSMoreButton: UIView {
                                                    attributes: textAttributes,
                                                    trailingTextAttributes: trailingTextAttributes)
         accessibilityLabel = label.attributedText?.string
-        isFocusable = !text.willFit(to: labelSize, attributes: textAttributes)
+        isFocusable = !text.willFit(to: labelSize,
+                                    attributes: textAttributes,
+                                    trailingTextAttributes: trailingTextAttributes)
     }
 }
