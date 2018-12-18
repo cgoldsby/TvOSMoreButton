@@ -69,7 +69,7 @@ $ brew install carthage
 To integrate TvOSMoreButton into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "cgoldsby/TvOSMoreButton" ~> 1.2.1
+github "cgoldsby/TvOSMoreButton" ~> 1.2.2
 ```
 
 Run `carthage update` to build the framework and drag the built TvOSMoreButton.framework into your Xcode project.
