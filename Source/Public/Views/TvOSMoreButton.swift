@@ -26,9 +26,20 @@ import Foundation
 
 @objc
 open class TvOSMoreButton: UIView {
+
+    /*
+     *  FocusableMode.Auto
+     *  Focus is allowed only when the text does not fit on the label.
+     */
+    enum FocusableMode {
+        case auto
+        case manual(_ isFocusable: Bool)
+    }
+
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
+
     private var isFocusable = false {
         didSet {
             if isFocusable {
@@ -40,6 +51,17 @@ open class TvOSMoreButton: UIView {
         }
     }
 
+    var focusableMode: FocusableMode = .auto {
+        didSet {
+            switch focusableMode {
+            case .manual(let isFocusable):
+                self.isFocusable = isFocusable
+            default:
+                isFocusable = false
+            }
+        }
+    }
+    
     @objc open var text: String? {
 
         didSet {
@@ -176,7 +198,6 @@ open class TvOSMoreButton: UIView {
         isAccessibilityElement = true
         accessibilityTraits = UIAccessibilityTraits.button
         accessibilityIdentifier = "tvos more button"
-        isFocusable = false
     }
 
     private func setUpLabel() {
@@ -264,8 +285,11 @@ open class TvOSMoreButton: UIView {
                                                    attributes: textAttributes,
                                                    trailingTextAttributes: trailingTextAttributes)
         accessibilityLabel = label.attributedText?.string
-        isFocusable = !text.willFit(to: labelSize,
-                                    attributes: textAttributes,
-                                    trailingTextAttributes: trailingTextAttributes)
+
+        if case .auto = focusableMode {
+            isFocusable = !text.willFit(to: labelSize,
+                                        attributes: textAttributes,
+                                        trailingTextAttributes: trailingTextAttributes)
+        }
     }
 }
