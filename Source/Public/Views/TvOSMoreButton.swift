@@ -51,7 +51,7 @@ open class TvOSMoreButton: UIView {
         }
     }
 
-    var focusableMode: FocusableMode = .auto {
+    open var focusableMode: FocusableMode = .auto {
         didSet {
             switch focusableMode {
             case .manual(let isFocusable):
