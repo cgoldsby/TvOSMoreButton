@@ -9,7 +9,9 @@ The TvOSMoreButton is a simple view which aims to mirror the behavior of Apple's
 
 If the text is too long to fit with in the button bounds then the text will be truncated and '... More' will be appended.
 
-If the text fits with in the bounds of the button then the button is not focusable.
+By default, if the text is truncated the button will be focusable. If the text is not truncated then the button will not be focusable.
+
+However, you can set `focusableMode` to `manual(_ isFocusable: Bool)` to alter the focus behavior. This mode will force the button to be always be focused or never be focused.
 
 When the button is focused, pressing select on the Apple TV remote will trigger a callback.
 
@@ -45,7 +47,7 @@ platform :tvos, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'TvOSMoreButton', '~> 1.2.2'
+    pod 'TvOSMoreButton', '~> 1.2.3'
 end
 ```
 

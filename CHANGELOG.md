@@ -3,9 +3,24 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121) | [1.2.2](#122)
+- `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121) | [1.2.2](#122) | [1.2.3](#123)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)| [1.1.4](#114)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.2.3](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.2.3)
+Released on 2019-01-16.
+### More control over when button is focused 🔢
+This release adds new functionality, `focusableMode` to define when the button should be focus (#29).
+
+By default the focusable mode is set to `auto`. When the text is too long the button will be focusable, else it will not be focusable. This is the current behavior.
+
+In addition, you can set the focusable mode to `manual(_ isFocusable: Bool)`. This mode will force the button to be always be focused or never be focused.
+
+* Added `focusableMode` property (#29) via Roman Gritsuk
+
+Personal thanks to everyone who contributed! 🙇
+
+Let make 2019 a great year together! 👩‍💻👨‍💻
 
 ## [1.2.2](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.2.2)
 Released on 2018-12-18.
