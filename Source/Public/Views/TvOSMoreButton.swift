@@ -31,7 +31,7 @@ open class TvOSMoreButton: UIView {
      *  FocusableMode.Auto
      *  Focus is allowed only when the text does not fit on the label.
      */
-    enum FocusableMode {
+    public enum FocusableMode {
         case auto
         case manual(_ isFocusable: Bool)
     }
