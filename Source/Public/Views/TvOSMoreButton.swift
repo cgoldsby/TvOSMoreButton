@@ -56,8 +56,8 @@ open class TvOSMoreButton: UIView {
             switch focusableMode {
             case .manual(let isFocusable):
                 self.isFocusable = isFocusable
-            default:
-                isFocusable = false
+            case .auto:
+                updateUI()
             }
         }
     }
