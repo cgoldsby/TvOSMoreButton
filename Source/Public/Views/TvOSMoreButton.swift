@@ -61,7 +61,7 @@ open class TvOSMoreButton: UIView {
             }
         }
     }
-    
+
     @objc open var text: String? {
 
         didSet {
