@@ -29,12 +29,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB76C5AE1DB5873B0014B8D5"
-               BuildableName = "TvOSMoreButtonTests.xctest"
-               BlueprintName = "TvOSMoreButtonTests"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:TvOSMoreButton.xcodeproj">
             </BuildableReference>
          </TestableReference>
