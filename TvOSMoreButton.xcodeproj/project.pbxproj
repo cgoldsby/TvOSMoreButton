@@ -10,11 +10,13 @@
 		EB52FF2C1DBCF6AA00F97D2B /* BundleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52FF2B1DBCF6AA00F97D2B /* BundleLoader.swift */; };
 		EB76C5B01DB5873B0014B8D5 /* TvOSMoreButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB76C5A61DB5873B0014B8D5 /* TvOSMoreButton.framework */; };
 		EB88B1FE1E86F6EC00CBAB27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB88B2001E86F6EC00CBAB27 /* Localizable.strings */; };
+		EB96ECF222F7565C00649C4E /* Tests_TvOSMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96ECF122F7565C00649C4E /* Tests_TvOSMoreButton.swift */; };
 		EBA6991E1DB938C700D1818C /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699141DB938C700D1818C /* LocalizedStrings.swift */; };
 		EBA6991F1DB938C700D1818C /* String+Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699151DB938C700D1818C /* String+Truncation.swift */; };
 		EBA699201DB938C700D1818C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA699161DB938C700D1818C /* UIView+Autolayout.swift */; };
 		EBA699221DB938C700D1818C /* TvOSMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6991B1DB938C700D1818C /* TvOSMoreButton.swift */; };
 		EBA699281DB93A5A00D1818C /* TvOSMoreButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA699101DB938C700D1818C /* TvOSMoreButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBDB171A22F8B2EB00152EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBDB171922F8B2EB00152EC0 /* Localizable.strings */; };
 		F19B7E7CD6AA838829204C0B /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB66589A984B3E76FC3824E /* Pods_UnitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,7 @@
 		EB88B2021E86F70800CBAB27 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB88B2031E86F71300CBAB27 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB88B2041E86F72100CBAB27 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB96ECF122F7565C00649C4E /* Tests_TvOSMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_TvOSMoreButton.swift; sourceTree = "<group>"; };
 		EBA699101DB938C700D1818C /* TvOSMoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TvOSMoreButton.h; sourceTree = "<group>"; };
 		EBA699111DB938C700D1818C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA699141DB938C700D1818C /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		EBAD63A61EAD71E50007B48B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EBAD63A71EAD72210007B48B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBAD63A81EAD72B00007B48B /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBDB171922F8B2EB00152EC0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,22 @@
 				EB76C5AF1DB5873B0014B8D5 /* UnitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EB96ECEF22F755ED00649C4E /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				EB96ECF022F755F500649C4E /* Views */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		EB96ECF022F755F500649C4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB96ECF122F7565C00649C4E /* Tests_TvOSMoreButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EBA6990E1DB938C700D1818C /* Resources */ = {
@@ -161,9 +181,19 @@
 		EBA699231DB938D100D1818C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EB96ECEF22F755ED00649C4E /* Public */,
+				EBDB171822F8B2BD00152EC0 /* Resources */,
 				EBA699251DB938D100D1818C /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		EBDB171822F8B2BD00152EC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBDB171922F8B2EB00152EC0 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F3544326E084FA17418DBC58 /* Frameworks */ = {
@@ -240,12 +270,12 @@
 				TargetAttributes = {
 					EB76C5A51DB5873B0014B8D5 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Manual;
 					};
 					EB76C5AE1DB5873B0014B8D5 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -291,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDB171A22F8B2EB00152EC0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB96ECF222F7565C00649C4E /* Tests_TvOSMoreButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -578,7 +610,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cgoldsby.TvOSMoreButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -591,9 +623,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cgoldsby.TvOSMoreButtonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cgoldsby.TvOSMoreButton.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -606,8 +639,9 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cgoldsby.TvOSMoreButtonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cgoldsby.TvOSMoreButton.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
