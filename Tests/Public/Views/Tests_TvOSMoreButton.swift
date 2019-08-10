@@ -256,7 +256,7 @@ final class Tests_TvOSMoreButton: XCTestCase {
         sut.applyUnfocusedAppearance()
 
         // Then
-        📸(sut, file: "test_that_unfocused_button_with_truncated_text_renders_correctly")
+        📸(sut)
     }
 
     // MARK: - Private
