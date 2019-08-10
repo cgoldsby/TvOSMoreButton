@@ -1,0 +1,10 @@
+
+language: swift
+osx_image: xcode10.2
+
+before_install:
+  - pod install
+
+xcode_workspace: TvOSMoreButton.xcworkspace
+xcode_scheme: TvOSMoreButton
+xcode_destination: platform=tvOS Simulator,OS=12.2,name=Apple TV
