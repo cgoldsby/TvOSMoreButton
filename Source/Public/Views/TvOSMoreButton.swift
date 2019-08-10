@@ -31,7 +31,7 @@ open class TvOSMoreButton: UIView {
      *  FocusableMode.Auto
      *  Focus is allowed only when the text does not fit on the label.
      */
-    public enum FocusableMode {
+    public enum FocusableMode: Equatable {
         case auto
         case manual(_ isFocusable: Bool)
     }
@@ -63,49 +63,43 @@ open class TvOSMoreButton: UIView {
     }
 
     @objc open var text: String? {
-
-        didSet {
-            updateUI()
-        }
+        didSet { updateUI() }
     }
 
     @objc open var textColor = UIColor.white {
-
         didSet {
             label.textColor = textColor
+            updateUI()
         }
     }
 
     @objc open var font = UIFont.systemFont(ofSize: 25) {
-
         didSet {
             label.font = font
+            updateUI()
         }
     }
 
     @objc open var textAlignment = NSTextAlignment.natural {
-
-        didSet {
-            label.textAlignment = textAlignment
-        }
+        didSet { label.textAlignment = textAlignment }
     }
 
     @objc open var ellipsesString = String.TvOSMoreButton.ellipses.🌍 {
-
-        didSet {
-            updateUI()
-        }
+        didSet { updateUI() }
     }
 
     @objc open var trailingText = String.TvOSMoreButton.more.🌍 {
-
-        didSet {
-            updateUI()
-        }
+        didSet { updateUI() }
     }
 
-    @objc open var trailingTextColor = UIColor.black.withAlphaComponent(0.5)
-    @objc open var trailingTextFont = UIFont.boldSystemFont(ofSize: 18)
+    @objc open var trailingTextColor = UIColor.black.withAlphaComponent(0.5) {
+        didSet { updateUI() }
+    }
+
+    @objc open var trailingTextFont = UIFont.boldSystemFont(ofSize: 18) {
+        didSet { updateUI() }
+    }
+
     @objc open var pressAnimationDuration = 0.1
     @objc open var labelMargin = CGFloat(12.0)
     @objc open var cornerRadius = CGFloat(10.0)
@@ -201,7 +195,7 @@ open class TvOSMoreButton: UIView {
     }
 
     private func setUpLabel() {
-        label = UILabel()
+        label = UILabel(frame: bounds)
         label.numberOfLines = 0
         addSubview(label)
 
@@ -210,7 +204,7 @@ open class TvOSMoreButton: UIView {
     }
 
     private func setUpFocusedView() {
-        focusedView = UIView()
+        focusedView = UIView(frame: bounds)
         focusedView.layer.cornerRadius = cornerRadius
         focusedView.layer.shadowColor = shadowColor
         focusedView.layer.shadowRadius = shadowRadius
@@ -220,6 +214,7 @@ open class TvOSMoreButton: UIView {
 
         let blurEffect = UIBlurEffect(style: .light)
         let blurredView = UIVisualEffectView(effect: blurEffect)
+        blurredView.frame = bounds
         blurredView.alpha = focusedViewAlpha
         blurredView.layer.cornerRadius = cornerRadius
         blurredView.layer.masksToBounds = true
@@ -240,14 +235,14 @@ open class TvOSMoreButton: UIView {
 
     // MARK: - Focus Appearance
 
-    private func applyFocusedAppearance() {
+    func applyFocusedAppearance() {
         transform = CGAffineTransform(scaleX: focusedScaleFactor, y: focusedScaleFactor)
         focusedView.layer.shadowOffset = focusedShadowOffset
         focusedView.layer.shadowOpacity = focusedShadowOpacity
         focusedView.alpha = 1
     }
 
-    private func applyUnfocusedAppearance() {
+    func applyUnfocusedAppearance() {
         transform = CGAffineTransform.identity
         focusedView.layer.shadowOffset = .zero
         focusedView.layer.shadowOpacity = 0

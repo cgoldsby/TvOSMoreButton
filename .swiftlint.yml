@@ -9,3 +9,4 @@ excluded:
   - Carthage
   - Pods
   - Example/Pods
+  - Tests
