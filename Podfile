@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 platform :tvos, '10.0'
 
 target 'UnitTests' do

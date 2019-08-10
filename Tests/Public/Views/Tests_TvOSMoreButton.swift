@@ -26,7 +26,9 @@ import SnapshotTesting
 import XCTest
 @testable import TvOSMoreButton
 
+// swiftlint:disable type_name
 final class Tests_TvOSMoreButton: XCTestCase {
+// swiftlint:enable type_name
 
     private var sut: TvOSMoreButton!
 
@@ -261,7 +263,10 @@ final class Tests_TvOSMoreButton: XCTestCase {
 
     // MARK: - Private
 
+    // swiftlint:disable identifier_name
     private func 📸(_ view: UIView, file: StaticString = #file, testName: String = #function, line: UInt = #line) {
+        // swiftlint:enable identifier_name
+
         var frame = sut.bounds
         frame.size.width += 30
         frame.size.height += 30
