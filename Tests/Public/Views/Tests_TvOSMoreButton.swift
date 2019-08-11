@@ -261,6 +261,31 @@ final class Tests_TvOSMoreButton: XCTestCase {
         📸(sut)
     }
 
+    func test_that_unfocused_button_with_text_that_fits_and_custom_content_inset_renders_correctly() {
+        // Given
+        let customContentInset = UIEdgeInsets(top: 20, left: 35, bottom: 20, right: 35)
+        let textThatFits = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+
+        // When
+        sut.text = textThatFits
+        sut.contentInset = customContentInset
+
+        // Then
+        📸(sut)
+    }
+
+    func test_that_unfocused_button_with_truncated_text_and_custom_content_inset_renders_correctly() {
+        // Given
+        let customContentInset = UIEdgeInsets(top: 20, left: 35, bottom: 20, right: 35)
+
+        // When
+        sut.text = longText
+        sut.contentInset = customContentInset
+
+        // Then
+        📸(sut)
+    }
+
     // MARK: - Private
 
     // swiftlint:disable identifier_name

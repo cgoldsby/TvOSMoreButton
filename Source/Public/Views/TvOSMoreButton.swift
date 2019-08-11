@@ -36,6 +36,11 @@ open class TvOSMoreButton: UIView {
         case manual(_ isFocusable: Bool)
     }
 
+    private lazy var contentView: UIView = {
+        let contentView = UIView(frame: bounds)
+        return contentView
+    }()
+
     private var label: UILabel!
     private var focusedView: UIView!
     private var selectGestureRecognizer: UIGestureRecognizer!
@@ -100,8 +105,29 @@ open class TvOSMoreButton: UIView {
         didSet { updateUI() }
     }
 
+    @objc open var contentInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12) {
+        didSet {
+            guard contentView.superview != nil else { return }
+            contentView.removeFromSuperview()
+            addSubview(contentView)
+            contentView.pinToSuperview(insets: contentInset)
+            updateUI()
+        }
+    }
+
+    @available(*, deprecated, renamed: "contentInset")
+    @objc open var labelMargin = CGFloat(12.0) {
+        didSet {
+            contentInset = UIEdgeInsets(
+                top: labelMargin,
+                left: labelMargin,
+                bottom: labelMargin,
+                right: labelMargin
+            )
+        }
+    }
+
     @objc open var pressAnimationDuration = 0.1
-    @objc open var labelMargin = CGFloat(12.0)
     @objc open var cornerRadius = CGFloat(10.0)
     @objc open var focusedScaleFactor = CGFloat(1.05)
     @objc open var shadowRadius = CGFloat(10)
@@ -180,6 +206,7 @@ open class TvOSMoreButton: UIView {
     private func setUpUI() {
         setUpView()
         setUpFocusedView()
+        setUpContentView()
         setUpLabel()
         setUpSelectGestureRecognizer()
         applyUnfocusedAppearance()
@@ -194,13 +221,16 @@ open class TvOSMoreButton: UIView {
         accessibilityIdentifier = "tvos more button"
     }
 
+    private func setUpContentView() {
+        addSubview(contentView)
+        contentView.pinToSuperview(insets: contentInset)
+    }
+
     private func setUpLabel() {
         label = UILabel(frame: bounds)
         label.numberOfLines = 0
-        addSubview(label)
-
-        let labelInsets = UIEdgeInsets(top: labelMargin, left: labelMargin, bottom: labelMargin, right: labelMargin)
-        label.pinEdgesToSuperviewEdges(insets: labelInsets)
+        contentView.addSubview(label)
+        label.pinToSuperview()
     }
 
     private func setUpFocusedView() {
@@ -210,7 +240,7 @@ open class TvOSMoreButton: UIView {
         focusedView.layer.shadowRadius = shadowRadius
 
         addSubview(focusedView)
-        focusedView.pinEdgesToSuperviewEdges()
+        focusedView.pinToSuperview()
 
         let blurEffect = UIBlurEffect(style: .light)
         let blurredView = UIVisualEffectView(effect: blurEffect)
@@ -220,7 +250,7 @@ open class TvOSMoreButton: UIView {
         blurredView.layer.masksToBounds = true
 
         focusedView.addSubview(blurredView)
-        blurredView.pinEdgesToSuperviewEdges()
+        blurredView.pinToSuperview()
     }
 
     private func setUpSelectGestureRecognizer() {
