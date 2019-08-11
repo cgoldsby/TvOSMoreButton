@@ -26,7 +26,7 @@ import UIKit
 
 extension UIView {
 
-    func pinEdgesToSuperviewEdges(insets: UIEdgeInsets = .zero) {
+    func pinToSuperview(insets: UIEdgeInsets = .zero) {
         guard let superview = superview else { return }
 
         translatesAutoresizingMaskIntoConstraints = false
