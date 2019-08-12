@@ -1,7 +1,7 @@
 //
 //  TvOSMoreButton.swift
 //
-// Copyright (c) 2016-2017 Chris Goldsby
+// Copyright (c) 2016-2019 Chris Goldsby
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

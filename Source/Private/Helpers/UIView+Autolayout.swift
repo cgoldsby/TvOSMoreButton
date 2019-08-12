@@ -1,7 +1,7 @@
 //
 //  UIView+Autolayout.swift
 //
-// Copyright (c) 2016-2017 Chris Goldsby
+// Copyright (c) 2016-2019 Chris Goldsby
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -32,8 +32,8 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: insets.top)
         let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom)
-        let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: insets.left)
-        let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -insets.right)
-        superview.addConstraints([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
+        let leadingConstraint = leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: insets.left)
+        let trailingConstraint = trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -insets.right)
+        superview.addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
     }
 }
