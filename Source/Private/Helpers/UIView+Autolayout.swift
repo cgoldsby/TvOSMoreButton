@@ -32,8 +32,8 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: insets.top)
         let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom)
-        let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: insets.left)
-        let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -insets.right)
-        superview.addConstraints([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
+        let leadingConstraint = leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: insets.left)
+        let trailingConstraint = trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -insets.right)
+        superview.addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
     }
 }
