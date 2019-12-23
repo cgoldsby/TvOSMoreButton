@@ -47,7 +47,7 @@ platform :tvos, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'TvOSMoreButton', '~> 1.2.3'
+    pod 'TvOSMoreButton', '~> 1.3.0'
 end
 ```
 
