@@ -9,9 +9,11 @@ All notable changes to this project will be documented in this file.
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ## [1.3.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.3.0)
-Released on XXXXXX
-### Update to Swift 5
-Support for building with Xcode 11 and Swift 5.0. This version requires Xcode 11 or later with Swift 5.0 compiler.
+Released on 2020-02-18.
+### Update to Swift 5 🦉
+Support for building with Xcode 11 and Swift 5.0. This version requires Xcode 11 or later with Swift 5.0 compiler (#33) via David Cordero
+
+Personal thanks to everyone who contributed! 🙇
 
 ## [1.2.3](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.2.3)
 Released on 2019-01-16.
