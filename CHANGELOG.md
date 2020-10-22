@@ -3,15 +3,23 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
+- `1.4.x` Releases - [1.4.0](#140)
 - `1.3.x` Releases - [1.3.0](#130)
 - `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121) | [1.2.2](#122) | [1.2.3](#123)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)| [1.1.4](#114)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
+## [1.4.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.4.0)
+Released on 2020-10-22.
+### Support Swift Package Manager (SPM) 📦
+Support for Swift Package Manager (#35) via Markus Mueller.
+
+Personal thanks to everyone who contributed! 🙇
+
 ## [1.3.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.3.0)
 Released on 2020-02-18.
 ### Update to Swift 5 🦉
-Support for building with Xcode 11 and Swift 5.0. This version requires Xcode 11 or later with Swift 5.0 compiler (#33) via David Cordero
+Support for building with Xcode 11 and Swift 5.0. This version requires Xcode 11 or later with Swift 5.0 compiler (#33) via David Cordero.
 
 Personal thanks to everyone who contributed! 🙇
 
