@@ -7,7 +7,7 @@ DEPENDENCIES:
   - TvOSTextViewer
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://cocoapods-cdn.netlify.app/:
     - TvOSTextViewer
 
 EXTERNAL SOURCES:
@@ -18,6 +18,6 @@ SPEC CHECKSUMS:
   TvOSMoreButton: 293f34e3db5e4e8876ccb110632b40f9318dec7d
   TvOSTextViewer: a8403c9a7a312e6fe3b18b7e82839e7d8697a326
 
-PODFILE CHECKSUM: ba4e8deecd5173b1fb94e874cbc1d1167ce84843
+PODFILE CHECKSUM: eb741d973e05673c74cdf9fd62b4a7e18f29a05f
 
 COCOAPODS: 1.8.4

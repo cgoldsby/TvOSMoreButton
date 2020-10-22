@@ -1,10 +1,9 @@
-source 'https://github.com/CocoaPods/Specs.git'
+# frozen_string_literal: true
 
 platform :tvos, '9.0'
-use_frameworks!
 
 target 'Example' do
+  use_frameworks!
   pod 'TvOSMoreButton', path: '..'
   pod 'TvOSTextViewer'
 end
-
