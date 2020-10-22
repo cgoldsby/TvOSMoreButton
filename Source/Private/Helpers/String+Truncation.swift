@@ -23,6 +23,8 @@
 //
 
 import Foundation
+import CoreGraphics
+import UIKit
 
 extension String {
 
