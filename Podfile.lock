@@ -1,20 +1,21 @@
 PODS:
-  - SnapshotTesting (1.5.0)
+  - SnapshotTesting (1.8.2)
   - SwiftLint (0.27.0)
 
 DEPENDENCIES:
-  - SnapshotTesting (~> 1.5)
+  - SnapshotTesting (~> 1.8.2)
   - SwiftLint (~> 0.27.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SnapshotTesting
+  https://cocoapods-cdn.netlify.app/:
     - SwiftLint
+  trunk:
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
-  SnapshotTesting: 9ca1d80f6322509a035856170c11d0571b1f7171
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: e78d26064185b48dabe511cff7d54d38fd91ab49
+PODFILE CHECKSUM: 6a5a5ea58ac416216ed8f7235e4ab69f14f25e0b
 
 COCOAPODS: 1.8.4
