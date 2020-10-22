@@ -313,7 +313,7 @@ final class Tests_TvOSMoreButton: XCTestCase {
 
 extension Bundle {
     static func testBundle() -> Bundle! {
-        return Bundle(identifier: "com.cgoldsby.TvOSMoreButton.UnitTests")!
+        return Bundle(for: Tests_TvOSMoreButton.self)
     }
 }
 
