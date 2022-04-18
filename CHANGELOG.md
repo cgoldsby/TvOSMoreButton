@@ -3,11 +3,18 @@ All notable changes to this project will be documented in this file.
 `TvOSMoreButton` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.4.x` Releases - [1.4.0](#140)
+- `1.4.x` Releases - [1.4.0](#140) | [1.4.1](#141)
 - `1.3.x` Releases - [1.3.0](#130)
 - `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121) | [1.2.2](#122) | [1.2.3](#123)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113)| [1.1.4](#114)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+## [1.4.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.4.1)
+Released on 2022-04-18.
+### Fix warning when using Xcode 13.2.1 🛠
+Fix Xcode warnings when using Xcode 13.2.1 (13C100) (#37) via Chris Goldsby.
+
+Have a happy spring everyone! 🌸
 
 ## [1.4.0](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.4.0)
 Released on 2020-10-22.
