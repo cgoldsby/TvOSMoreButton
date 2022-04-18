@@ -47,7 +47,7 @@ platform :tvos, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'TvOSMoreButton', '~> 1.3.0'
+    pod 'TvOSMoreButton', '~> 1.4.1'
 end
 ```
 
@@ -71,7 +71,7 @@ $ brew install carthage
 To integrate TvOSMoreButton into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "cgoldsby/TvOSMoreButton" ~> 1.2.2
+github "cgoldsby/TvOSMoreButton" ~> 1.4.1
 ```
 
 Run `carthage update` to build the framework and drag the built TvOSMoreButton.framework into your Xcode project.

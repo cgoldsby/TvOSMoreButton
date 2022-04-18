@@ -7,15 +7,14 @@ DEPENDENCIES:
   - SwiftLint (~> 0.27.0)
 
 SPEC REPOS:
-  https://cocoapods-cdn.netlify.app/:
-    - SwiftLint
   trunk:
     - SnapshotTesting
+    - SwiftLint
 
 SPEC CHECKSUMS:
   SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 6a5a5ea58ac416216ed8f7235e4ab69f14f25e0b
+PODFILE CHECKSUM: b6ff737bac7475fdd0fb7aac90fdd7da53629c38
 
 COCOAPODS: 1.8.4

@@ -24,9 +24,9 @@ let package = Package(
             dependencies: [
             ],
             path: "Source",
-            exclude: ["Artwork", "Example", "Info.plist"],
+            exclude: ["../Artwork", "../Example", "Info.plist"],
             resources: [
-                .process("Resources")
+                .process("../Resources")
             ]
         ),
         .testTarget(
