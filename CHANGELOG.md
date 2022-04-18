@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 ## [1.4.1](https://github.com/cgoldsby/TvOSMoreButton/releases/tag/1.4.1)
 Released on 2022-04-18.
 ### Fix warning when using Xcode 13.2.1 🛠
-Fix Xcode warnings when using Xcode 13.2.1 (13C100) (#37) via Chris Goldsby.
+Fix Xcode warnings when using Xcode 13.2.1 (13C100) (#38) via Chris Goldsby.
 
 Have a happy spring everyone! 🌸
 
