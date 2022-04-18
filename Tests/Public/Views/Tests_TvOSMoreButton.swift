@@ -37,7 +37,7 @@ final class Tests_TvOSMoreButton: XCTestCase {
         localizedStringBundle = .testBundle()
         let frame = CGRect(x: 0, y: 0, width: 500, height: 100)
         sut = TvOSMoreButton(frame: frame)
-//        record = true
+//        isRecording = true
     }
 
     override func tearDown() {
