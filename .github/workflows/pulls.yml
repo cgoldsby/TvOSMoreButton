@@ -55,4 +55,4 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
       - name: Run tests
-        run: xcodebuild test -scheme TvOSMoreButton -workspace TvOSMoreButton.xcworkspace -destination 'platform=tvOS Simulator,OS=13.0,name=Apple TV' | xcpretty && exit ${PIPESTATUS[0]}
+        run: xcodebuild test -scheme TvOSMoreButton -workspace TvOSMoreButton.xcworkspace -destination 'platform=tvOS Simulator,OS=15.0,name=Apple TV'
