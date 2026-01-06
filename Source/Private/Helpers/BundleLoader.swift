@@ -29,6 +29,9 @@ var localizedStringBundle = Bundle.main
 final class BundleLoader {
 
     static let main: Bundle = {
+        #if SWIFT_PACKAGE
+        return Bundle.module
+        #else
         let podBundle = Bundle(for: BundleLoader.self)
 
         guard let url = podBundle.url(forResource: String(describing: TvOSMoreButton.self), withExtension: "bundle"),
@@ -46,5 +49,6 @@ final class BundleLoader {
         else {
             return localizedStringBundle
         }
+        #endif
     }()
 }

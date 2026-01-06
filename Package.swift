@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "TvOSMoreButton",
+    defaultLocalization: "en",
     platforms: [
         .tvOS(.v10)
     ],
@@ -23,10 +24,11 @@ let package = Package(
             name: "TvOSMoreButton",
             dependencies: [
             ],
-            path: "Source",
-            exclude: ["../Artwork", "../Example", "Info.plist"],
+            path: ".",
+            exclude: ["Artwork", "Example", "Tests", "Source/Info.plist", "TvOSMoreButton.xcodeproj", "TvOSMoreButton.xcworkspace", "Podfile", "Podfile.lock", "TvOSMoreButton.podspec", "Gemfile", "Gemfile.lock", "CHANGELOG.md", "README.md", "LICENSE", ".github", ".swiftlint.yml", ".xcode-version", ".gitignore"],
+            sources: ["Source"],
             resources: [
-                .process("../Resources")
+                .process("Resources")
             ]
         ),
         .testTarget(
