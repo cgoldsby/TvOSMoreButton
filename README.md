@@ -31,7 +31,23 @@ The majority of the UI properties are configurable; like
 
 ## Installation
 
-#### CocoaPods
+### Swift Package Manager
+
+Add TvOSMoreButton to your project via Xcode:
+
+1. File > Add Packages...
+2. Enter the repository URL: `https://github.com/cgoldsby/TvOSMoreButton.git`
+3. Select your desired version rule
+
+Or add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/cgoldsby/TvOSMoreButton.git", from: "1.4.2")
+]
+```
+
+### CocoaPods
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ```
@@ -47,7 +63,7 @@ platform :tvos, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'TvOSMoreButton', '~> 1.4.1'
+    pod 'TvOSMoreButton', '~> 1.4.2'
 end
 ```
 
@@ -71,7 +87,7 @@ $ brew install carthage
 To integrate TvOSMoreButton into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "cgoldsby/TvOSMoreButton" ~> 1.4.1
+github "cgoldsby/TvOSMoreButton" ~> 1.4.2
 ```
 
 Run `carthage update` to build the framework and drag the built TvOSMoreButton.framework into your Xcode project.
